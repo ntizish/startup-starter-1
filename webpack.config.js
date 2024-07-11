@@ -1,12 +1,12 @@
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin')
 const path = require('path')
 
 module.exports = (env, argv) => ({
   mode: argv.mode === 'production' ? 'production' : 'development',
   devtool: argv.mode === 'production' ? false : 'inline-source-map',
   entry: {
-    ui: './src/app/index.jsx',
+    ui: './src/app/ui.jsx',
     code: './src/plugin/controller.js'
   },
   output: {
@@ -36,11 +36,11 @@ module.exports = (env, argv) => ({
   resolve: { extensions: ['.jsx', '.js'] },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/app/index.html',
+      template: './src/app/ui.html',
       filename: 'ui.html',
-      inlineSource: '.(js)$',
+      inlineSource: '.js$',
       chunks: ['ui']
-    })
-    // new HtmlWebpackInlineSourcePlugin()
+    }),
+    new HtmlInlineScriptPlugin()
   ]
 })

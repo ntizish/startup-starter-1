@@ -1,7 +1,7 @@
 {
   "name": "Design to Code Tools",
   "id": "0",
-  "api": "0.1.0",
+  "api": "1.0.0",
   "main": "dist/code.js",
   "ui": "dist/ui.html",
   "editorType": ["figma"]
