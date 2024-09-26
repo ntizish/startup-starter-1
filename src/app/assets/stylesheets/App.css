@@ -2,3 +2,22 @@
 @import 'reset.css';
 @import 'fonts.css';
 @import 'basics.css';
+
+body {
+    background-color: #CCCCCC;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    color: white;
+    background-color: #CCCCCC;
+    border: none;
+    font-size: 64px;
+    width: 100%;
+    text-decoration: underline;
+}
