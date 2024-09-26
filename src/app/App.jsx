@@ -21,8 +21,16 @@ export default class App extends React.Component {
     super(params)
 
     // this.state = {}
+
+    // байндим метод с конктекстом класса
+    this.handleGenerateSlide = this.handleGenerateSlide.bind(this);
   }
 
+  handleGenerateSlide() {
+    // Send a message to the Figma plugin backend to generate the slide
+    parent.postMessage({ pluginMessage: { type: 'generate-slide' } }, '*');
+  }
+  
   componentDidMount() {
     this.setToStorage('hellou from plugin')
   }
@@ -65,7 +73,7 @@ export default class App extends React.Component {
   //   )
   // }
 
-  // render() {
-  //   return <div>Yo! Test</div>
-  // }
+  render() {
+    return <button onClick={this.handleGenerateSlide}>Generate Slide</button>
+  }
 }

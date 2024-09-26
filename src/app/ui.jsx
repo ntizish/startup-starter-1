@@ -11,7 +11,7 @@ const props = {}
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('LOADED')
-  // const root = createRoot(document.getElementById('react-page'))
-  // console.log(root)
-  // root.render(<App {...props} />)
+  const root = createRoot(document.getElementById('react-page'))
+  console.log(root)
+  root.render(<App {...props} />)
 })
