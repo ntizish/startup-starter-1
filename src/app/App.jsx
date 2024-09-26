@@ -23,30 +23,32 @@ export default class App extends React.Component {
     // this.state = {}
   }
 
-  // componentDidMount() {}
+  componentDidMount() {
+    this.setToStorage('hellou from plugin')
+  }
 
-  // getFromStorage = () => {
-  //   parent.postMessage(
-  //     {
-  //       pluginMessage: {
-  //         type: 'get-storage'
-  //       }
-  //     },
-  //     '*'
-  //   )
-  // }
+  getFromStorage = () => {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: 'get-storage'
+        }
+      },
+      '*'
+    )
+  }
 
-  // setToStorage = (id) => {
-  //   parent.postMessage(
-  //     {
-  //       pluginMessage: {
-  //         type: 'set-storage',
-  //         id: id
-  //       }
-  //     },
-  //     '*'
-  //   )
-  // }
+  setToStorage = (id) => {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: 'set-storage',
+          id: id
+        }
+      },
+      '*'
+    )
+  }
 
   // exportPageToFigma = () => {
   //   // const { data } = this.props
@@ -63,7 +65,7 @@ export default class App extends React.Component {
   //   )
   // }
 
-  render() {
-    return <div>Yo! Test</div>
-  }
+  // render() {
+  //   return <div>Yo! Test</div>
+  // }
 }

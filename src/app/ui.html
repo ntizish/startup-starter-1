@@ -46,6 +46,14 @@
       '*'
     )
   }
+
+
 </script>
 
-<div id="react-page"></div>
+<button id="generate-slide">Generate Slide</button>
+<script>
+// When the button is clicked, send a message to the plugin
+  document.getElementById('generate-slide').onclick = () => {
+        parent.postMessage({ pluginMessage: { type: 'generate-slide' } }, '*');
+      };
+</script>

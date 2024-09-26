@@ -1,7 +1,7 @@
 import { saveImageDataOrExportToFigma } from './images'
 
 figma.showUI(__html__)
-figma.ui.resize(668, 628)
+figma.ui.resize(400, 400)
 
 figma.ui.onmessage = (msg) => {
   console.log('FIGMA JUST GOT A MESSAGE, YO', msg)
