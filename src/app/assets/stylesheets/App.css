@@ -14,10 +14,10 @@ body {
 }
 
 button {
-    color: white;
-    background-color: #CCCCCC;
+    color: #CCCCCC;
+    background-color: white;
     border: none;
-    font-size: 64px;
+    font-size: 24px;
     width: 100%;
-    text-decoration: underline;
+    padding: 12px;
 }

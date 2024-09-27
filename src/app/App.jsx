@@ -74,6 +74,6 @@ export default class App extends React.Component {
   // }
 
   render() {
-    return <button onClick={this.handleGenerateSlide}>GENERATE SLIDE</button>
+    return <button onClick={this.handleGenerateSlide}>Generate slide</button>
   }
 }
