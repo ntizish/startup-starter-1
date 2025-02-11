@@ -1,3 +1,5 @@
+// Main UI component user interacts with
+
 // import * as React from 'react'
 // import * as ReactDOM from 'react-dom'
 

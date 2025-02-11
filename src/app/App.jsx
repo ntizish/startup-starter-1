@@ -1,4 +1,6 @@
 import React from 'react'
+import A_Button from "./components/01_Atoms/A_Button";
+import P_Home from "./components/05_Pages/P_Home";
 // import * as React from 'react'
 // import * as ReactDOM from 'react-dom'
 
@@ -74,6 +76,11 @@ export default class App extends React.Component {
   // }
 
   render() {
-    return <button onClick={this.handleGenerateSlide}>Generate Slide</button>
+    console.log("App is rendering!");  // Debugging App render
+    return (
+      <P_Home
+          onGenerate={this.handleGenerateSlide}
+      />
+    )
   }
 }
