@@ -1,9 +1,7 @@
 import { hexToRgb } from "./colorManagement";
 
 export default class SlideElement {
-    static loadedFonts = new Set();
-
-    constructor({ type, content = "", position, font, color, size, imageSrc }) {
+    constructor({ type, content = "", position, font, color, size, imageSrc, alignHorizontal, alignVertical, fontSize }) {
       this.type = type; // "text" | "image" | "shape"
       this.content = content; // Only for text
       this.position = position; // [x, y]
@@ -11,34 +9,34 @@ export default class SlideElement {
       this.color = color;
       this.size = size; // { width, height }
       this.imageSrc = imageSrc; // Only for images
+      this.alignHorizontal = alignHorizontal;
+      this.alignVertical = alignVertical;
+      this.fontSize = fontSize;
     }
   
     async createFigmaElement() {
       
       if (this.type === "text") {
         try {
-          console.log(`Trying: ${this.content}`);
-          console.log(`loadedFonts : ${this.loadedFonts}`);
+          console.log(`Trying to add text: ${this.content}`);
 
           const font = { family: "Inter", style: "Regular" };
-          // Only load font if it hasn't been loaded before
-          const fontKey = `${font.family}-${font.style}`;
-          if (!SlideElement.loadedFonts.has(fontKey)) {
-              console.log(`Loading font: ${fontKey}`);
-              await figma.loadFontAsync(font);
-              SlideElement.loadedFonts.add(fontKey);
-          }
           
           const text = figma.createText();
+
           text.characters = String(this.content || "Placeholder Text");
           text.fontName = font;
           text.fills = [{ type: "SOLID", color: hexToRgb(this.color) }];
           text.x = this.position[0];
           text.y = this.position[1];
-          
+          text.resize(this.size[0], this.size[1]);
+          text.textAlignHorizontal = this.alignHorizontal;
+          text.textAlignVertical = this.alignVertical;
+          text.fontSize = this.fontSize;
+
           return text;
           } catch (error) {
-            console.error(`Font loading failed for ${this.content}:`, error);
+            console.error(`Text creation failed for ${this.content}:`, error);
             return null;
           }
       } else if (this.type === "image") {

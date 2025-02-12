@@ -5,7 +5,10 @@ import templates from "../libraries/templates";
 const slidesData = templates;
 
 // Function to generate slides
-export function generateSlides() {
+export async function generateSlides() {
+
+    const font = { family: "Inter", style: "Regular" };
+    await figma.loadFontAsync(font);
 
     // iterating over slides templates
     Object.keys(templates).forEach((slideKey, index) => {
@@ -25,7 +28,8 @@ export function generateSlides() {
                 fontSize: element.fontSize,
                 alignHorizontal: element.alignHorizontal,
                 alignVertical: element.alignVertical,
-                dimensions: element.dimensions
+                size: element.size,
+                imageSrc: element.imageSrc,
             });
             
             return slideElement.createFigmaElement()
