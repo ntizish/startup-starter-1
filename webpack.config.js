@@ -32,6 +32,14 @@ module.exports = (env, argv) => ({
           'css-loader'     // Translates CSS into CommonJS
         ]
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
       // Allows you to use "<%= require('./file.svg') %>" in your HTML code to get a data URI
       { test: /\.(png|jpg|gif|webp|svg)$/, use: [{ loader: 'url-loader' }] }
     ]
