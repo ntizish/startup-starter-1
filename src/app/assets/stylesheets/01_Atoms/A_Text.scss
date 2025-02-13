@@ -1,0 +1,19 @@
+@use '../vars';
+
+.A_Text {
+  font-style: normal;
+  
+  &--heading {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 102%;
+    letter-spacing: -0.32px;
+  }
+  
+  &--small {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 115%;
+    letter-spacing: -0.12px;
+  }
+}
