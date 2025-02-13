@@ -1,5 +1,7 @@
 import React from "react";
 import A_Button from "../01_Atoms/A_Button";
+import { Heart, Lifebuoy } from '@phosphor-icons/react';
+import M_HomeNav from "../02_Molecules/M_HomeNav";
 
 export default class P_Home extends React.PureComponent {
 
@@ -11,11 +13,15 @@ export default class P_Home extends React.PureComponent {
     const {onGenerate} = this.props
 
     return (
-        <div style={{ padding: "20px", textAlign: "center", backgroundColor: 'white' }}>
-          <h1>Welcome to Pitch Deck Generator</h1>
-          <p>Select your settings and generate slides easily.</p>
-          <A_Button label="Generate Slide" handleClick={onGenerate} />
-        </div>
+      <div style={{ 
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        backgroundColor: 'white'
+      }}>
+        <M_HomeNav />
+      </div>
     );
   }
 };

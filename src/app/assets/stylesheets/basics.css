@@ -5,6 +5,8 @@
 body {
   font-family: 'PT Sans';
   color: var(--black);
-  background: var(--background-grey);
+  background: var(--white);
   user-select: none;
 }
+
+
