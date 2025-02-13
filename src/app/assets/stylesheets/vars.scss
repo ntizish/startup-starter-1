@@ -1,0 +1,23 @@
+// Colors
+$black: #2a2921;
+$background-grey: #f6f4f3;
+$white: #fff;
+$card-border: #faf8f7;
+$grey: #aeaeae;
+$blue: #0029ff;
+$light-blue: #EEF4FF;
+$main-blue: #2970FF;
+$text-secondary: #475467;
+
+// Make CSS variables available too if needed
+:root {
+  --black: #{$black};
+  --background-grey: #{$background-grey};
+  --white: #{$white};
+  --card-border: #{$card-border};
+  --grey: #{$grey};
+  --blue: #{$blue};
+  --light-blue: #{$light-blue};
+  --main-blue: #{$main-blue};
+  --text-secondary: #{$text-secondary};
+}

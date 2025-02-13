@@ -6,7 +6,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-import * as styles from './assets/stylesheets/App.css'
+import * as styles from './assets/stylesheets/App.scss'
 import App from './App'
 
 const props = {}

@@ -1,0 +1,22 @@
+@use '../vars';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-size: 14px;
+  padding: 6px;
+  width: fit-content;
+  
+  &--primary {
+    background-color: vars.$light-blue;
+    color: vars.$main-blue;
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: vars.$text-secondary;
+  }
+} 

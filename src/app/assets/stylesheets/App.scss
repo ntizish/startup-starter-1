@@ -1,0 +1,26 @@
+@use 'vars';
+@use 'reset';
+@use 'fonts';
+@use 'basics';
+@use '01_Atoms/A_Button';
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 56px;
+    background-color: vars.$white;
+}
+
+button {
+    color: #CCCCCC;
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    width: 100%;
+    padding: 12px;
+}

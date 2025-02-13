@@ -1,5 +1,5 @@
 import React from 'react';
-import { Horse, ShoppingCart } from '@phosphor-icons/react'; // Import any default icon you want
+import { Horse } from '@phosphor-icons/react';
 
 const A_Button = ({ 
   icon: Icon = Horse,
@@ -10,20 +10,6 @@ const A_Button = ({
   size = 'medium',
   weight = 'regular'
 }) => {
-  const buttonStyle = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '4px',
-    borderRadius: '6px',
-    transition: 'all 0.2s',
-    fontSize: '14px',
-    flexDirection: iconPosition === 'right' ? 'row-reverse' : 'row',
-    padding: '6px',
-    backgroundColor: variant === 'primary' ? 'var(--light-blue)' : 'transparent',
-    color: variant === 'primary' ? 'var(--main-blue)' : 'var(--text-secondary)',
-    width: 'fit-content',
-  };
-
   const iconSizes = {
     small: 16,
     medium: 20,
@@ -33,7 +19,10 @@ const A_Button = ({
   return (
     <button
       onClick={onClick}
-      style={buttonStyle}
+      className={`button button--${variant}`}
+      style={{
+        flexDirection: iconPosition === 'right' ? 'row-reverse' : 'row'
+      }}
     >
       <Icon 
         size={iconSizes[size]} 
