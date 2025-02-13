@@ -3,6 +3,8 @@
 @use 'fonts';
 @use 'basics';
 @use '01_Atoms/A_Button';
+@use 'components/A_Text';
+@use 'components/M_Header';
 
 body {
     width: 100vw;
