@@ -18,7 +18,8 @@ export async function generateSlides() {
             elements: templates[slideKey].elements,
         }).generateFrame(index);
 
-        const elementPromises = templates[slideKey].elements.map((element) => {
+        // Create all elements first and store them in an array
+        const elementPromises = templates[slideKey].elements.map(async (element) => {
             console.log('Iterating over an element');
             const slideElement = new SlideElement({
                 type: element.type,
@@ -35,16 +36,28 @@ export async function generateSlides() {
                 lineHeight: element.lineHeight,
             });
             
-            return slideElement.createFigmaElement()
-                .then(figmaElement => {
-                    console.log(`Appending ${element.content}`);
-                    if (figmaElement) frame.appendChild(figmaElement);
-                })
-                .catch(error => console.error("Error creating Figma element:", error));
+            try {
+                const figmaElement = await slideElement.createFigmaElement();
+                if (figmaElement) {
+                    console.log(`Created element: ${element.content}`);
+                    return figmaElement;
+                }
+            } catch (error) {
+                console.error("Error creating Figma element:", error);
+                return null;
+            }
         });
 
-        // Ensure all elements are processed before adding the frame to the page
-        Promise.all(elementPromises).then(() => {
+        // Wait for all elements to be created, then add them to the frame in reverse order
+        Promise.all(elementPromises).then(figmaElements => {
+            // Filter out any null elements
+            const validElements = figmaElements.filter(Boolean);
+            
+            // Add elements in reverse order (first element in template will be at the bottom)
+            validElements.reverse().forEach(element => {
+                if (element) frame.appendChild(element);
+            });
+            
             figma.currentPage.appendChild(frame);
             console.log(`Finished generating slide: ${slideKey}`);
         });
