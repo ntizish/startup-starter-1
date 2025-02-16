@@ -54,7 +54,7 @@ export async function generateSlides() {
             const validElements = figmaElements.filter(Boolean);
             
             // Add elements in reverse order (first element in template will be at the bottom)
-            validElements.reverse().forEach(element => {
+            validElements.forEach(element => {
                 if (element) frame.appendChild(element);
             });
             

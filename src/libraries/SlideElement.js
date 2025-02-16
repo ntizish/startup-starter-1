@@ -77,10 +77,10 @@ export default class SlideElement {
           
           // Apply new text properties if they exist
           if (this.letterSpacing !== undefined) {
-            text.letterSpacing = { value: this.letterSpacing, unit: 'PIXELS' };
+            text.letterSpacing = { value: this.letterSpacing, unit: 'PERCENT' };
           }
           if (this.lineHeight !== undefined) {
-            text.lineHeight = { value: this.lineHeight, unit: 'PIXELS' };
+            text.lineHeight = { value: this.lineHeight, unit: 'PERCENT' };
           }
 
           // Load the font with the specified weight before setting characters
