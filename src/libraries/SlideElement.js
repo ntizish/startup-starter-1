@@ -1,4 +1,9 @@
 import { hexToRgb } from "./colorManagement";
+import CM_1 from '../app/assets/images/slides/CM/CM_1.png';
+
+const imageMap = {
+  'src/app/assets/images/slides/CM/CM_1.png': CM_1
+};
 
 export default class SlideElement {
     constructor({ type, content = "", position, font, color, size, imageSrc, alignHorizontal, alignVertical, fontSize }) {
@@ -12,6 +17,22 @@ export default class SlideElement {
       this.alignHorizontal = alignHorizontal;
       this.alignVertical = alignVertical;
       this.fontSize = fontSize;
+    }
+
+    // Move to utils
+    base64ToUint8Array(dataUrl) {
+      // Remove the data URL prefix
+      const base64 = dataUrl.replace(/^data:image\/\w+;base64,/, '');
+      
+      // Decode base64
+      const binStr = Buffer.from(base64, 'base64').toString('binary');
+      
+      // Convert to Uint8Array
+      const uint8Array = new Uint8Array(binStr.length);
+      for (let i = 0; i < binStr.length; i++) {
+        uint8Array[i] = binStr.charCodeAt(i);
+      }
+      return uint8Array;
     }
   
     async createFigmaElement() {
@@ -40,16 +61,33 @@ export default class SlideElement {
             return null;
           }
       } else if (this.type === "image") {
+        
         try {
-          const image = figma.createRectangle();
-          if (this.size && this.size.width && this.size.height) {
-            image.resize(this.size.width, this.size.height);
+          // Create image from URL
+          const image = await figma.createImageAsync(this.imageSrc);
+          
+          // Create a rectangle for the image
+          const rect = figma.createRectangle();
+          rect.x = this.position[0];
+          rect.y = this.position[1];
+
+          if (this.size) {
+            // If size is specified, use it
+            rect.resize(this.size[0], this.size[1]);
+          } else {
+            // Otherwise, use the image's original dimensions
+            const { width, height } = await image.getSizeAsync();
+            rect.resize(width, height);
           }
-          if (this.position) {
-            image.x = this.position[0];
-            image.y = this.position[1];
-          }
-          return image;
+
+          // Set the image as fill
+          rect.fills = [{
+            type: 'IMAGE',
+            imageHash: image.hash,
+            scaleMode: 'FILL'
+          }];
+
+          return rect;
         } catch (error) {
           console.error('Error creating image:', error);
           return null;

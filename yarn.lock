@@ -1675,6 +1675,11 @@
   "resolved" "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
   "version" "1.1.2"
 
+"buffer-loader@^0.1.0":
+  "integrity" "sha512-ucbiQL7IicJm1EHuXC4Oheu2oGjz6qKRmyqAXYTtWe4iC49743AU2DHlWpF51qKF+g/t62Jk8Yn+3FaCz5jJEA=="
+  "resolved" "https://registry.npmjs.org/buffer-loader/-/buffer-loader-0.1.0.tgz"
+  "version" "0.1.0"
+
 "bundle-name@^4.1.0":
   "integrity" "sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q=="
   "resolved" "https://registry.npmjs.org/bundle-name/-/bundle-name-4.1.0.tgz"
@@ -3259,6 +3264,14 @@
     "http-errors" "2.0.0"
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
+
+"raw-loader@^4.0.2":
+  "integrity" "sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA=="
+  "resolved" "https://registry.npmjs.org/raw-loader/-/raw-loader-4.0.2.tgz"
+  "version" "4.0.2"
+  dependencies:
+    "loader-utils" "^2.0.0"
+    "schema-utils" "^3.0.0"
 
 "react-dom@^18.3.1", "react-dom@>= 16.8":
   "integrity" "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw=="
