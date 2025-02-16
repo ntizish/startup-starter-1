@@ -7,8 +7,8 @@ const slidesData = templates;
 // Function to generate slides
 export async function generateSlides() {
 
-    const font = { family: "Inter", style: "Regular" };
-    await figma.loadFontAsync(font);
+    await figma.loadFontAsync({ family: "Inter", style: "Regular" });
+    await figma.loadFontAsync({ family: "Inter", style: "Medium" });
 
     // iterating over slides templates
     Object.keys(templates).forEach((slideKey, index) => {
@@ -30,6 +30,9 @@ export async function generateSlides() {
                 alignVertical: element.alignVertical,
                 size: element.size,
                 imageSrc: element.imageSrc,
+                fontWeight: element.fontWeight,
+                letterSpacing: element.letterSpacing,
+                lineHeight: element.lineHeight,
             });
             
             return slideElement.createFigmaElement()

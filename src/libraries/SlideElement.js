@@ -6,20 +6,37 @@ const imageMap = {
 };
 
 export default class SlideElement {
-    constructor({ type, content = "", position, font, color, size, imageSrc, alignHorizontal, alignVertical, fontSize }) {
-      this.type = type; // "text" | "image" | "shape"
-      this.content = content; // Only for text
-      this.position = position; // [x, y]
-      this.font = font;
-      this.color = color;
-      this.size = size; // { width, height }
-      this.imageSrc = imageSrc; // Only for images
-      this.alignHorizontal = alignHorizontal;
-      this.alignVertical = alignVertical;
-      this.fontSize = fontSize;
-    }
+  constructor({ 
+    type, 
+    content = "", 
+    position, 
+    font, 
+    color, 
+    size, 
+    imageSrc, 
+    alignHorizontal, 
+    alignVertical, 
+    fontSize,
+    letterSpacing,    // New: for letter spacing
+    lineHeight,       // New: for line height
+    fontWeight        // New: for font weight (Regular, Medium, Bold, etc.)
+  }) {
+    this.type = type; // "text" | "image" | "shape"
+    this.content = content; // Only for text
+    this.position = position; // [x, y]
+    this.font = font;
+    this.color = color;
+    this.size = size; // { width, height }
+    this.imageSrc = imageSrc; // Only for images
+    this.alignHorizontal = alignHorizontal;
+    this.alignVertical = alignVertical;
+    this.fontSize = fontSize;
+    this.letterSpacing = letterSpacing;
+    this.lineHeight = lineHeight;
+    this.fontWeight = fontWeight;
+  } 
 
-    // Move to utils
+    // !!! MOVE TO UTILS !!!
     base64ToUint8Array(dataUrl) {
       // Remove the data URL prefix
       const base64 = dataUrl.replace(/^data:image\/\w+;base64,/, '');
@@ -41,7 +58,10 @@ export default class SlideElement {
         try {
           console.log(`Trying to add text: ${this.content}`);
 
-          const font = { family: "Inter", style: "Regular" };
+          const font = { 
+            family: "Inter", 
+            style: this.fontWeight || "Regular" 
+          };
           
           const text = figma.createText();
 
@@ -54,6 +74,17 @@ export default class SlideElement {
           text.textAlignHorizontal = this.alignHorizontal;
           text.textAlignVertical = this.alignVertical;
           text.fontSize = this.fontSize;
+          
+          // Apply new text properties if they exist
+          if (this.letterSpacing !== undefined) {
+            text.letterSpacing = { value: this.letterSpacing, unit: 'PIXELS' };
+          }
+          if (this.lineHeight !== undefined) {
+            text.lineHeight = { value: this.lineHeight, unit: 'PIXELS' };
+          }
+
+          // Load the font with the specified weight before setting characters
+          // await figma.loadFontAsync(font);
 
           return text;
           } catch (error) {
