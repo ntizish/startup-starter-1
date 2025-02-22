@@ -5,7 +5,10 @@ import templates from "../libraries/templates";
 const slidesData = templates;
 
 // Function to generate slides
-export async function generateSlides() {
+export async function generateSlides({ template = 'CM', palette = 'CM1', font = 'inter', projectName = 'Untitled' }) {
+
+    console.log('Received selections:', { template, palette, font, projectName });
+    
 
     await figma.loadFontAsync({ family: "Inter", style: "Regular" });
     await figma.loadFontAsync({ family: "Inter", style: "Medium" });

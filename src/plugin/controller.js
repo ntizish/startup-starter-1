@@ -1,8 +1,7 @@
 import { saveImageDataOrExportToFigma } from './images'
 import { generateSlides } from "./renderSlides";
 
-figma.showUI(__html__)
-figma.ui.resize(540, 685)
+figma.showUI(__html__, { width: 400, height: 600 });
 
 figma.ui.onmessage = async (msg) => {
   console.log('FIGMA JUST GOT A MESSAGE, YO', msg)
@@ -22,12 +21,21 @@ figma.ui.onmessage = async (msg) => {
       console.log('from controller', test)
       figma.ui.postMessage({ type: 'get-storage', data: test })
     })
+  } else if (msg.type === 'generate-slide') {
+    const { template, palette, font, projectName } = msg;
+    
+    try {
+      await generateSlides({
+        template,
+        palette,
+        font,
+        projectName
+      });
+    } catch (error) {
+      console.error('Error generating slides:', error);
+      figma.closePlugin(`Error: ${error.message}`);
+    }
   } else {
     console.log('unknown message')
   }
-
-  if (msg.type === "generate-slide") {
-    console.log("Received request to generate slides...");
-    generateSlides();
-}
 }
