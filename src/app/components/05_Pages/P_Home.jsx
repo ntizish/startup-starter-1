@@ -1,39 +1,51 @@
-import React from "react";
-import A_Button from "../01_Atoms/A_Button";
-import { Heart, Lifebuoy, PlusCircle } from '@phosphor-icons/react';
-import M_HomeNav from "../02_Molecules/M_HomeNav";
+import React, { useState } from 'react';
+import { PlusCircle } from '@phosphor-icons/react';
 import M_WelcomeBlock from '../02_Molecules/M_WelcomeBlock';
+import A_Button from '../01_Atoms/A_Button';
+import P_Generator from './P_Generator';
 
-export default class P_Home extends React.PureComponent {
+export default function P_Home() {
+  const [isGenerating, setIsGenerating] = useState(false);
 
-  constructor(props) {
-    super(props)
-  }
+  const handleGenerate = (selections) => {
+    console.log('Generating with selections:', selections);
+    parent.postMessage({ 
+      pluginMessage: { 
+        type: 'generate-slides',
+        ...selections
+      }
+    }, '*');
+    setIsGenerating(false);
+  };
 
-  render() {
-    const {onGenerate} = this.props
-
+  if (isGenerating) {
     return (
-      <div style={{ 
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: 'white',
-        gap: '56px'
-      }}>
-        <M_HomeNav />
-        <M_WelcomeBlock/>
-        <A_Button 
-          icon={PlusCircle}
-          weight="fill"
-          text="Looks quite empty..."
-          variant="action_block"
-          iconPosition="up"
-          onClick={onGenerate}
-        />
-      </div>
+      <P_Generator
+        onComplete={handleGenerate}
+        onCancel={() => setIsGenerating(false)}
+      />
     );
   }
-};
+
+  return (
+    <div style={{ 
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      backgroundColor: 'white',
+      gap: '56px'
+    }}>
+      <M_WelcomeBlock />
+      <A_Button 
+        icon={PlusCircle}
+        weight="fill"
+        text="Looks quite empty..."
+        variant="action_block"
+        iconPosition="up"
+        onClick={() => setIsGenerating(true)}
+        />
+    </div>
+  );
+}

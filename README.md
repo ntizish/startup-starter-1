@@ -1,3 +1,3 @@
-# Figma Plugin Boilerplate
+# Pitchiro
 
-First attempt on creating a Startup Pitch Deck Starter [Figma Plugin]
+##Generate a pitch deck in Figma in a matter of minutes
