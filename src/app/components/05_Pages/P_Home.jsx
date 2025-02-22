@@ -11,7 +11,7 @@ export default function P_Home() {
     console.log('Generating with selections:', selections);
     parent.postMessage({ 
       pluginMessage: { 
-        type: 'generate-slides',
+        type: 'generate-slide',
         ...selections
       }
     }, '*');
