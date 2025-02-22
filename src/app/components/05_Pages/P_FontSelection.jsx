@@ -3,7 +3,7 @@ import A_Button from '../01_Atoms/A_Button';
 
 export default function P_FontSelection({ onSelect, onBack, selectedFont, onFontSelect }) {
   const font = {
-    id: 'inter',
+    id: 'Inter',
     name: 'Inter',
     sample: 'Aa Bb Cc 123'
   };

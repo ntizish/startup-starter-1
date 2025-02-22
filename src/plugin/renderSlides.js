@@ -5,13 +5,13 @@ import templates from "../libraries/templates";
 const slidesData = templates;
 
 // Function to generate slides
-export async function generateSlides({ template = 'CM', palette = 'CM1', font = 'inter', projectName = 'Untitled' }) {
+export async function generateSlides({ template = 'Default', palette = 'Default', font = 'Default', projectName = 'Untitled' }) {
 
     console.log('Received selections:', { template, palette, font, projectName });
     
 
-    await figma.loadFontAsync({ family: "Inter", style: "Regular" });
-    await figma.loadFontAsync({ family: "Inter", style: "Medium" });
+    await figma.loadFontAsync({ family: font, style: "Regular" });
+    await figma.loadFontAsync({ family: font, style: "Medium" });
 
     // iterating over slides templates
     Object.keys(templates).forEach((slideKey, index) => {
@@ -34,6 +34,7 @@ export async function generateSlides({ template = 'CM', palette = 'CM1', font = 
                 alignVertical: element.alignVertical,
                 size: element.size,
                 imageSrc: element.imageSrc,
+                font: font,
                 fontWeight: element.fontWeight,
                 letterSpacing: element.letterSpacing,
                 lineHeight: element.lineHeight,

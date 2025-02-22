@@ -56,10 +56,10 @@ export default class SlideElement {
       
       if (this.type === "text") {
         try {
-          console.log(`Trying to add text: ${this.content}`);
+          console.log(`Trying to add text: ${this.content} with font: ${this.font}`);
 
           const font = { 
-            family: "Inter", 
+            family: this.font, 
             style: this.fontWeight || "Regular" 
           };
           
