@@ -16,6 +16,7 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
           className={`font-option ${selectedFont === font.id ? 'selected' : ''}`}
           onClick={() => {
             console.log('Font selected:', font.id);
+            
             onFontSelect(font.id);
           }}
         >

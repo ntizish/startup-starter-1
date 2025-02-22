@@ -12,13 +12,14 @@ const STEPS = {
 };
 
 export default function P_Generator({ onComplete, onCancel }) {
-  const [currentStep, setCurrentStep] = useState(STEPS.TEMPLATE);
   const [selections, setSelections] = useState({
     template: '',
     palette: '',
     font: '',
     projectName: ''
   });
+
+  const [currentStep, setCurrentStep] = useState(STEPS.TEMPLATE);
 
   const handleSelection = (key, value) => {
     setSelections(prev => ({
@@ -37,6 +38,11 @@ export default function P_Generator({ onComplete, onCancel }) {
         break;
       case STEPS.FONT:
         setCurrentStep(STEPS.NAME);
+        console.log('Selected options:', {
+            template: selections.template,
+            palette: selections.palette,
+            font: selections.font
+        });
         break;
       case STEPS.NAME:
         onComplete(selections);
