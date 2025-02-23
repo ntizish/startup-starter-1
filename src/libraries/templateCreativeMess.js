@@ -1,6 +1,6 @@
 // Templates of the slides being generated with the plugin
 
-const templates = {
+const templateCreativeMess = {
     titleSlide: {
       title: "Title Slide",
       elements: [
@@ -10,4 +10,4 @@ const templates = {
     }
   };
   
-  export default templates;
+  export default templateCreativeMess;

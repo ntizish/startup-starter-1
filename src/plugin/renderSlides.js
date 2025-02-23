@@ -1,6 +1,6 @@
 import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
-import templates from "../libraries/templates";
+import templateCreativeMess from "../libraries/templateCreativeMess";
 
 // Function to generate slides
 export async function generateSlides({ template = 'Default', palette = 'Default', font = 'Default', projectName = 'Untitled' }) {
@@ -11,18 +11,18 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
     await figma.loadFontAsync({ family: font, style: "Regular" });
     await figma.loadFontAsync({ family: font, style: "Medium" });
 
-
+    const selectedTemplate = getTemplateByName(template);
 
     // iterating over slides templates
-    Object.keys(templates).forEach((slideKey, index) => {
+    Object.keys(selectedTemplate).forEach((slideKey, index) => {
         console.log(`Generating... Current template is ${slideKey}`) 
         const frame = new Slide({
-            title: templates[slideKey].title,
-            elements: templates[slideKey].elements,
+            title: selectedTemplate[slideKey].title,
+            elements: selectedTemplate[slideKey].elements,
         }).generateFrame(index);
 
         // Create all elements first and store them in an array
-        const elementPromises = templates[slideKey].elements.map(async (element) => {
+        const elementPromises = selectedTemplate[slideKey].elements.map(async (element) => {
             console.log('Iterating over an element');
             const slideElement = new SlideElement({
                 type: element.type,
@@ -68,3 +68,10 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
     });
 }
 
+function getTemplateByName(templateName) {
+    const templates = {
+        'CreativeMess': templateCreativeMess
+    };
+    
+    return templates[templateName];
+}
