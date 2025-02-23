@@ -1,7 +1,7 @@
 import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
 import templateCreativeMess from "../libraries/templateCreativeMess";
-
+import CM1 from "../libraries/palettes/CM1";
 // Function to generate slides
 export async function generateSlides({ template = 'Default', palette = 'Default', font = 'Default', projectName = 'Untitled' }) {
 
@@ -12,6 +12,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
     await figma.loadFontAsync({ family: font, style: "Medium" });
 
     const selectedTemplate = getTemplateByName(template);
+    const selectedPalette = getPaletteByName(palette);
 
     // iterating over slides templates
     Object.keys(selectedTemplate).forEach((slideKey, index) => {
@@ -28,7 +29,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
                 type: element.type,
                 content: element.content,
                 position: element.position,
-                color: element.color,
+                color: getColorByIndex(selectedPalette, element.colorIndex),
                 fontSize: element.fontSize,
                 alignHorizontal: element.alignHorizontal,
                 alignVertical: element.alignVertical,
@@ -74,4 +75,17 @@ function getTemplateByName(templateName) {
     };
     
     return templates[templateName];
+}
+
+function getPaletteByName(paletteName) {
+    const palettes = {
+        'CM1': CM1
+    };
+    
+    return palettes[paletteName]?.colors;
+}
+
+function getColorByIndex(selectedPalette, index) {
+    
+    return selectedPalette[index];
 }

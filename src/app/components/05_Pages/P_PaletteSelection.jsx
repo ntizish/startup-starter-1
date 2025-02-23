@@ -5,7 +5,7 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
   const palette = {
     id: 'CM1',
     name: 'Creative Mess 1',
-    colors: ['#FF5733', '#FFC300', '#33A1FD'] // replace with actual CM colors
+    colors: ['#FFFFFF', '#000000', '#8D8D8D']
   };
 
   return (
