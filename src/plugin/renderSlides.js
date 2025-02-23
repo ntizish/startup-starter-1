@@ -2,8 +2,6 @@ import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
 import templates from "../libraries/templates";
 
-const slidesData = templates;
-
 // Function to generate slides
 export async function generateSlides({ template = 'Default', palette = 'Default', font = 'Default', projectName = 'Untitled' }) {
 
@@ -12,6 +10,8 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
 
     await figma.loadFontAsync({ family: font, style: "Regular" });
     await figma.loadFontAsync({ family: font, style: "Medium" });
+
+
 
     // iterating over slides templates
     Object.keys(templates).forEach((slideKey, index) => {
@@ -67,3 +67,4 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
         });
     });
 }
+

@@ -1,7 +1,7 @@
 import { saveImageDataOrExportToFigma } from './images'
 import { generateSlides } from "./renderSlides";
 
-figma.showUI(__html__, { width: 400, height: 600 });
+figma.showUI(__html__, { width: 540, height: 685 });
 
 figma.ui.onmessage = async (msg) => {
   console.log('FIGMA JUST GOT A MESSAGE, YO', msg)

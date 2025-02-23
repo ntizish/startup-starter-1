@@ -7,10 +7,10 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
       <h1>Select Template</h1>
       <div className="template-options">
         <button
-          className={`template-option ${selectedTemplate === 'CM' ? 'selected' : ''}`}
+          className={`template-option ${selectedTemplate === 'CreativeMess' ? 'selected' : ''}`}
           onClick={() => {
-            console.log('Template selected:', 'CM');
-            onTemplateSelect('CM')
+            console.log('Template selected:', 'CreativeMess');
+            onTemplateSelect('CreativeMess')
           }}
         >
           <span className="template-name">Creative Mess</span>

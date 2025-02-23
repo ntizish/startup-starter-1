@@ -3,6 +3,7 @@ import { PlusCircle } from '@phosphor-icons/react';
 import M_WelcomeBlock from '../02_Molecules/M_WelcomeBlock';
 import A_Button from '../01_Atoms/A_Button';
 import P_Generator from './P_Generator';
+import M_HomeNav from '../02_Molecules/M_HomeNav';
 
 export default function P_Home() {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -37,6 +38,7 @@ export default function P_Home() {
       backgroundColor: 'white',
       gap: '56px'
     }}>
+      <M_HomeNav />
       <M_WelcomeBlock />
       <A_Button 
         icon={PlusCircle}
