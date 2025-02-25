@@ -36,7 +36,7 @@ export default function P_Home() {
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: 'white',
-      gap: '56px'
+      gap: '40px'
     }}>
       <M_HomeNav />
       <M_WelcomeBlock />

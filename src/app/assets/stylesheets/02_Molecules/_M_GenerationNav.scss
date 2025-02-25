@@ -1,0 +1,19 @@
+@use '../vars';
+
+.M_GenerationNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid vars.$border-default;
+
+    p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+}

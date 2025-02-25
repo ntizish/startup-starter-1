@@ -3,8 +3,10 @@
 @use 'fonts';
 @use 'basics';
 @use '01_Atoms/A_Button';
+@use '01_Atoms/A_Link';
 @use '01_Atoms/A_Text';
 @use '02_Molecules/M_WelcomeBlock';
+@use '02_Molecules/M_GenerationNav';
 
 body {
     width: 100vw;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Horse } from '@phosphor-icons/react';
 
-const A_Button = ({ 
+const A_Link = ({ 
   icon: Icon = Horse,
   text = '', 
   iconPosition = 'left',
@@ -32,7 +32,7 @@ const A_Button = ({
   return (
     <button
       onClick={onClick}
-      className={`A_Button A_Button--${variant}`}
+      className={`A_Link A_Link--primary`}
       style={{
         flexDirection: getFlexDirection()
       }}
@@ -40,13 +40,11 @@ const A_Button = ({
       <Icon 
         size={iconSizes[size]} 
         weight={weight}
-        color={variant === 'primary' ? 'var(--main-blue)' : 'var(--text-secondary)'}
+        color={variant === 'primary' ? 'var(--link-grey)' : 'var(--text-secondary)'}
       />
-      {variant === "primary" ? (
-        <span className={`A_Text A_Text--${variant === 'action_block' ? 'small' : 'regular'}`}>{text}</span>
-      ) : text}
+      {text && <span className="A_Text A_Text--regular">{text}</span>}
     </button>
   );
 };
 
-export default A_Button;
+export default A_Link;

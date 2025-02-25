@@ -1,9 +1,11 @@
 import React from 'react';
 import A_Button from '../01_Atoms/A_Button';
+import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 
 export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate, onTemplateSelect }) {
   return (
     <div className="P_TemplateSelection">
+    <M_GenerationNav onBack={onBack} />
       <h1>Select Template</h1>
       <div className="template-options">
         <button

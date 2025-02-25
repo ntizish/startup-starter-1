@@ -12,6 +12,7 @@ const M_HomeNav = () => {
       width: '100%',
       maxWidth: '1200px',
       margin: '0 auto'
+      
     }}>
       <img 
         src={logo} 
