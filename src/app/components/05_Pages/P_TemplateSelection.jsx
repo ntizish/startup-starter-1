@@ -1,6 +1,7 @@
 import React from 'react';
 import A_Button from '../01_Atoms/A_Button';
 import M_GenerationNav from '../02_Molecules/M_GenerationNav';
+import { ArrowCircleRight } from '@phosphor-icons/react';
 
 export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate, onTemplateSelect }) {
   return (
@@ -22,7 +23,7 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
       <div className="navigation">
         <A_Button 
           onClick={onSelect} 
-          text="Next" 
+          text="Proceed" 
           variant="primary"
           disabled={!selectedTemplate}
         />

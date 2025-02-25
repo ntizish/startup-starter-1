@@ -11,7 +11,12 @@
   
   &--primary {
     background-color: vars.$light-blue;
+    justify-content: center;
     color: vars.$main-blue;
+    height: 82px;
+    width: 100vw;
+    border-radius: 0;
+    border-top: 1px solid rgba(vars.$main-blue, 0.32);
   }
   
   &--secondary {

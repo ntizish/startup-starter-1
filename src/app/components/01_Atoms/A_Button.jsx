@@ -2,7 +2,7 @@ import React from 'react';
 import { Horse } from '@phosphor-icons/react';
 
 const A_Button = ({ 
-  icon: Icon = Horse,
+  icon: Icon = null,
   text = '', 
   iconPosition = 'left',
   onClick,
@@ -37,11 +37,11 @@ const A_Button = ({
         flexDirection: getFlexDirection()
       }}
     >
-      <Icon 
+      {Icon && <Icon 
         size={iconSizes[size]} 
         weight={weight}
         color={variant === 'primary' ? 'var(--main-blue)' : 'var(--text-secondary)'}
-      />
+      />}
       {variant === "primary" ? (
         <span className={`A_Text A_Text--${variant === 'action_block' ? 'small' : 'regular'}`}>{text}</span>
       ) : text}
