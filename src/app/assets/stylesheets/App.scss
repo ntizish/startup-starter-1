@@ -6,9 +6,10 @@
 @use '01_Atoms/A_Button';
 @use '01_Atoms/A_Link';
 @use '01_Atoms/A_Text';
-
+@use '01_Atoms/A_Tag';
 @use '02_Molecules/M_WelcomeBlock';
 @use '02_Molecules/M_GenerationNav';
+@use '02_Molecules/M_TemplateOption';
 
 @use '05_Pages/P_TemplateSelection';
 
