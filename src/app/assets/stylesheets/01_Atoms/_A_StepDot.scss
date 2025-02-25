@@ -1,0 +1,23 @@
+@use '../vars';
+
+.A_StepDot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid vars.$grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$background-grey;
+}
+
+.A_StepDot_Inner {
+  width: 8px;
+  height: 8px;
+  background-color: vars.$black;
+  border-radius: 50%;
+}
+
+.A_StepDot:not(.A_StepDot--active):not(:has(.A_StepDot_Inner)) .A_StepDot_Inner {
+  display: none;
+}
