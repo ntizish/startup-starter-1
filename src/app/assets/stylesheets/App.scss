@@ -2,11 +2,15 @@
 @use 'reset';
 @use 'fonts';
 @use 'basics';
+
 @use '01_Atoms/A_Button';
 @use '01_Atoms/A_Link';
 @use '01_Atoms/A_Text';
+
 @use '02_Molecules/M_WelcomeBlock';
 @use '02_Molecules/M_GenerationNav';
+
+@use '05_Pages/P_TemplateSelection';
 
 body {
     width: 100vw;

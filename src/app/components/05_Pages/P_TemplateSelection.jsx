@@ -5,8 +5,8 @@ import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate, onTemplateSelect }) {
   return (
     <div className="P_TemplateSelection">
-    <M_GenerationNav onBack={onBack} />
-      <h1>Select Template</h1>
+        <M_GenerationNav onBack={onBack} />
+      
       <div className="template-options">
         <button
           className={`template-option ${selectedTemplate === 'CreativeMess' ? 'selected' : ''}`}
@@ -20,11 +20,6 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
         </button>
       </div>
       <div className="navigation">
-        <A_Button 
-          onClick={onBack} 
-          text="Back" 
-          variant="secondary"
-        />
         <A_Button 
           onClick={onSelect} 
           text="Next" 
