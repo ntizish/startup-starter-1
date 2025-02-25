@@ -7,10 +7,14 @@
 @use '01_Atoms/A_Link';
 @use '01_Atoms/A_Text';
 @use '01_Atoms/A_Tag';
+@use '01_Atoms/A_StepDot';
+
 @use '02_Molecules/M_WelcomeBlock';
 @use '02_Molecules/M_GenerationNav';
 @use '02_Molecules/M_TemplateOption';
 @use '02_Molecules/M_TemplateTags';
+@use '02_Molecules/M_StepIndicator';
+
 @use '05_Pages/P_TemplateSelection';
 
 body {
