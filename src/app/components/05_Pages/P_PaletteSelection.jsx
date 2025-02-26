@@ -1,5 +1,6 @@
 import React from 'react';
 import A_Button from '../01_Atoms/A_Button';
+import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 
 export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, onPaletteSelect }) {
   const palette = {
@@ -9,41 +10,55 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
   };
 
   return (
-    <div className="P_PaletteSelection">
-      <h1>Select Color Palette</h1>
-      <div className="palette-options">
-        <button
-          className={`palette-option ${selectedPalette === palette.id ? 'selected' : ''}`}
-          onClick={() => {
-            console.log('Palette selected:', palette.id);
-            onPaletteSelect(palette.id);
-          }}
-        >
-          <div className="palette-preview">
-            {palette.colors.map(color => (
-              <div 
-                key={color} 
-                className="color-sample"
-                style={{ backgroundColor: color }}
-              />
-            ))}
+
+    <div className="P_ParameterSelection">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+      <M_GenerationNav onBack={onBack} />
+      
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+          <div className="M_StepIndicator">
+              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
+              <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
+              <div className="A_StepDot"></div>
+              <div className="A_StepDot"></div>
+              <div className="A_StepDot"></div>
           </div>
-          <span>{palette.name}</span>
-        </button>
+
+          <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>What graphics suit your project the best?</h1>
+          </div>
+          
+          <div className="template-options" style={{width: '100%'}}>
+          <button
+            className={`palette-option ${selectedPalette === palette.id ? 'selected' : ''}`}
+            onClick={() => {
+              console.log('Palette selected:', palette.id);
+              onPaletteSelect(palette.id);
+            }}
+          >
+            <div className="palette-preview">
+              {palette.colors.map(color => (
+                <div 
+                  key={color} 
+                  className="color-sample"
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </div>
+            <span>{palette.name}</span>
+          </button>
+          </div>
       </div>
-      <div className="navigation">
-        <A_Button 
-          onClick={onBack} 
-          text="Back" 
-          variant="secondary"
-        />
-        <A_Button 
-          onClick={onSelect} 
-          text="Next" 
-          variant="primary"
-          disabled={!selectedPalette}
-        />
-      </div>
+    </div>
+
+    <div className="navigation">
+      <A_Button 
+        onClick={onSelect} 
+        text="Proceed" 
+        variant="primary"
+        disabled={!selectedPalette}
+      />
+    </div>
     </div>
   );
 } 

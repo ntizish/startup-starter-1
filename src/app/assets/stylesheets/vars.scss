@@ -17,6 +17,9 @@ $border-default: #D9D9D9;
 
 $link-grey: #757575;
 
+// Roundings
+$rounding-block: 56px;
+
 // Make CSS variables available too if needed
 :root {
   --black: #{$black};

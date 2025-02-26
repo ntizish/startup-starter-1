@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   border: 1px solid transparent;
-  border-radius: 24px;
+  border-radius: vars.$rounding-block;
   overflow: hidden;
   padding: 0;
   cursor: pointer;
