@@ -21,7 +21,7 @@ const M_WelcomeBlock = ({ title }) => {
     <div className="M_WelcomeBlock">
       <h1 className="A_Text A_Text--heading">
         Hello,👋<br />
-        glad to see you today!
+        <span style={{ opacity: '0.5' }}>glad to see you today!</span>
       </h1>
       <div className="M_WelcomeBlock__date">
         <div className="A_Text A_Text--small" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>

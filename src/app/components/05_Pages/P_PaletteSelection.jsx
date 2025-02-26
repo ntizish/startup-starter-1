@@ -33,10 +33,9 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
               <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
               <div className="A_StepDot"></div>
               <div className="A_StepDot"></div>
-              <div className="A_StepDot"></div>
             </div>
 
-            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>What graphics suit your project the best?</h1>
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>What palette suits your project the best?</h1>
           </div>
           
           <div className="template-options" style={{width: '100%'}}>

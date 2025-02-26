@@ -1,0 +1,29 @@
+@use '../vars';
+
+.M_FontOption {
+  width: 100%;
+  height: auto;
+  background: vars.$background-grey;;
+  border-radius: vars.$rounding-block;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  opacity: 0.6;
+
+  &:hover {
+    border-color: var(--color-gray-300);
+  }
+
+  &.selected {
+    opacity: 1;
+  }
+
+  .font-sample {
+    font-size: 64px;
+    color: vars.$black;
+    text-align: left;
+  }
+} 

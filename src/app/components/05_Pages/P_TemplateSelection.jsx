@@ -40,7 +40,7 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
                 ]}
                 isSelected={selectedTemplate === 'CreativeMess'}
                 onClick={() => {
-                    console.log('Template selected:', 'CreativeMess');
+                    console.log('Template selected:', "CreativeMess");
                     onTemplateSelect('CreativeMess')
                 }}
             />
