@@ -3,7 +3,8 @@
 .M_TemplateOption {
   position: relative;
   width: 100%;
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
+  opacity: 0.8;
   border-radius: vars.$rounding-block;
   overflow: hidden;
   padding: 0;
@@ -12,7 +13,8 @@
   background: none;
   
   &.selected {
-    border-color: vars.$grey;
+    opacity: 1;
+    // border-color: vars.$grey;
   }
 
   .template-image {

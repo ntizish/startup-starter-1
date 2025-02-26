@@ -1,0 +1,46 @@
+@use '../vars';
+
+.M_PaletteOption {
+  width: 100%;
+  background: vars.$background-grey;
+  border-radius: 122px;
+  opacity: 0.8;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+
+  &.selected {
+    opacity: 1;
+  }
+
+  .palette-preview {
+    width: 100%;
+    display: flex;
+    gap: 0;
+    padding-left:84px;
+
+
+    .color-circle {
+      border-radius: 50%;
+      position: relative;
+      margin-left: -84px;
+      aspect-ratio: 1/1;
+      width: calc(100% / 3 + 84px);
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+  }
+
+  .palette-tags {
+    position: absolute;
+    bottom: -12px;
+    left: 16px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
