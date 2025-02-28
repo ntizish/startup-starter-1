@@ -56,7 +56,7 @@ export default function P_ProjectNaming({ onComplete, onBack, projectName, onNam
       <div className="navigation">
         <A_Button 
           onClick={onComplete} 
-          text="Proceed" 
+          text="Generate Deck" 
           variant="primary"
           disabled={!projectName.trim() || !!error}
         />

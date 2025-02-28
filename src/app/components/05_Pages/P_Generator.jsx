@@ -3,12 +3,14 @@ import P_TemplateSelection from './P_TemplateSelection';
 import P_PaletteSelection from './P_PaletteSelection';
 import P_FontSelection from './P_FontSelection';
 import P_ProjectNaming from './P_ProjectNaming';
+import P_GeneratedDeck from './P_GeneratedDeck';
 
 const STEPS = {
   TEMPLATE: 'template',
   PALETTE: 'palette',
   FONT: 'font',
-  NAME: 'name'
+  NAME: 'name',
+  DECK: 'deck'
 };
 
 export default function P_Generator({ onComplete, onCancel }) {
@@ -16,7 +18,8 @@ export default function P_Generator({ onComplete, onCancel }) {
     template: '',
     palette: '',
     font: '',
-    projectName: ''
+    projectName: '',
+    generatedDeckImage: null
   });
 
   const [currentStep, setCurrentStep] = useState(STEPS.TEMPLATE);
@@ -28,7 +31,7 @@ export default function P_Generator({ onComplete, onCancel }) {
     }));
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     switch(currentStep) {
       case STEPS.TEMPLATE:
         setCurrentStep(STEPS.PALETTE);
@@ -38,14 +41,29 @@ export default function P_Generator({ onComplete, onCancel }) {
         break;
       case STEPS.FONT:
         setCurrentStep(STEPS.NAME);
-        console.log('Selected options:', {
-            template: selections.template,
-            palette: selections.palette,
-            font: selections.font
-        });
         break;
       case STEPS.NAME:
-        onComplete(selections);
+        try {
+          // Generate deck and complete the process
+          const generatedImage = 'path_to_generated_image';
+          const finalSelections = {
+            ...selections,
+            generatedDeckImage: generatedImage
+          };
+          
+          // Complete the generation process
+          onComplete(finalSelections);
+          
+          // Update local state and show the deck preview
+          handleSelection('generatedDeckImage', generatedImage);
+          setCurrentStep(STEPS.DECK);
+        } catch (error) {
+          console.error('Failed to generate deck:', error);
+        }
+        break;
+      case STEPS.DECK:
+        // Just handle the download here
+        window.location.href = selections.generatedDeckImage;
         break;
     }
   };
@@ -82,10 +100,17 @@ export default function P_Generator({ onComplete, onCancel }) {
       case STEPS.NAME:
         return (
           <P_ProjectNaming
-            onComplete={() => onComplete(selections)}
+            onComplete={() => handleNext()}
             onBack={() => setCurrentStep(STEPS.FONT)}
             projectName={selections.projectName}
             onNameChange={(name) => handleSelection('projectName', name)}
+          />
+        );
+      case STEPS.DECK:
+        return (
+          <P_GeneratedDeck
+            onBack={() => setCurrentStep(STEPS.NAME)}
+            onClose={onCancel}
           />
         );
     }

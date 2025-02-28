@@ -16,6 +16,9 @@ export default function P_Home() {
         ...selections
       }
     }, '*');
+  };
+
+  const handleGeneratorClose = () => {
     setIsGenerating(false);
   };
 
@@ -23,7 +26,7 @@ export default function P_Home() {
     return (
       <P_Generator
         onComplete={handleGenerate}
-        onCancel={() => setIsGenerating(false)}
+        onCancel={handleGeneratorClose}
       />
     );
   }
@@ -48,7 +51,7 @@ export default function P_Home() {
         variant="action_block"
         iconPosition="up"
         onClick={() => setIsGenerating(true)}
-        />
+      />
     </div>
   );
 }
