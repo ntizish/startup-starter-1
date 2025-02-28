@@ -3,6 +3,7 @@
 .A_Text {
   font-style: normal;
   font-family: 'Inter Display', sans-serif;
+
   &--heading {
     font-size: 32px;
     font-weight: 500;
@@ -12,6 +13,14 @@
     &-center {
         text-align: center;
       }
+  }
+
+    &--heading-large {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 102%;
+    letter-spacing: -0.32px;
+    text-align: center;
   }
   
   &--small {

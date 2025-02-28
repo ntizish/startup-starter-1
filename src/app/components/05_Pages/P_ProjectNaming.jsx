@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import A_Button from '../01_Atoms/A_Button';
+import M_GenerationNav from '../02_Molecules/M_GenerationNav';
+import A_GeneratorInput from '../01_Atoms/A_GeneratorInput';
 
 export default function P_ProjectNaming({ onComplete, onBack, projectName, onNameChange }) {
   const [error, setError] = useState('');
@@ -23,31 +25,38 @@ export default function P_ProjectNaming({ onComplete, onBack, projectName, onNam
   };
 
   return (
-    <div className="P_ProjectNaming">
-      <h1>Name Your Project</h1>
-      <div className="project-naming-form">
-        <div className="input-group">
-          <label htmlFor="projectName">Project Name</label>
-          <input
-            id="projectName"
-            type="text"
-            value={projectName}
-            onChange={handleNameChange}
-            placeholder="Enter project name"
-            className={error ? 'error' : ''}
-          />
-          {error && <span className="error-message">{error}</span>}
+    <div className="P_ParameterSelection">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+        <M_GenerationNav onBack={onBack} />
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+            <div className="M_StepIndicator">
+              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
+              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
+              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
+              <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
+            </div>
+
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>Name Your Project</h1>
+          </div>
+          
+          <div style={{width: '100%', maxWidth: '428px'}}>
+            <A_GeneratorInput
+              id="projectName"
+              value={projectName}
+              onChange={handleNameChange}
+              placeholder="Projectus"
+              error={error}
+            />
+          </div>
         </div>
       </div>
+
       <div className="navigation">
         <A_Button 
-          onClick={onBack} 
-          text="Back" 
-          variant="secondary"
-        />
-        <A_Button 
-          onClick={handleComplete} 
-          text="Generate"
+          onClick={onComplete} 
+          text="Proceed" 
           variant="primary"
           disabled={!projectName.trim() || !!error}
         />

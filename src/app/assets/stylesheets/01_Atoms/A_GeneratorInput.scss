@@ -1,0 +1,38 @@
+@use '../vars';
+
+.A_GeneratorInput {
+  width: 100%;
+  position: relative;
+
+  input.A_Text {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid vars.$border-default;
+    padding: 8px 0;
+    color: vars.$black;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      color: vars.$text-tertiary;
+      opacity: 1; /* For Firefox */
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom-color: vars.$main-blue;
+    }
+
+    &.error {
+      border-bottom-color: vars.$warning-tertiary;
+    }
+  }
+
+  .error-message {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: vars.$warning-tertiary;
+    font-size: 12px;
+  }
+}
