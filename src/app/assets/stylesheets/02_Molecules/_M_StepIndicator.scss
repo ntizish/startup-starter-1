@@ -3,4 +3,10 @@
 .M_StepIndicator {
     display: flex;
     gap: 12px;
+
+    &--small {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+    }
   }

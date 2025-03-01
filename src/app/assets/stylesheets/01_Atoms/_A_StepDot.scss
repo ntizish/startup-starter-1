@@ -8,6 +8,12 @@
   align-items: center;
   justify-content: center;
   background-color: vars.$background-grey;
+
+  &--small {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(vars.$black, 0.12);
+  }
 }
 
 .A_StepDot_Inner {
@@ -15,6 +21,11 @@
   height: 8px;
   background-color: vars.$black;
   border-radius: 50%;
+
+  &--small {
+    width: 4px;
+    height: 4px;
+  }
 }
 
 .A_StepDot:not(.A_StepDot--active):not(:has(.A_StepDot_Inner)) .A_StepDot_Inner {

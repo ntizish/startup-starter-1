@@ -29,6 +29,17 @@ const A_Button = ({
     }
   };
 
+  const getIconColor = () => {
+    switch(variant) {
+      case 'primary-special':
+        return 'var(--white)';
+      case 'primary':
+        return 'var(--main-blue)';
+      default:
+        return 'var(--text-secondary)';
+    }
+  };
+
   return (
     <button
       onClick={onClick}
@@ -40,9 +51,9 @@ const A_Button = ({
       {Icon && <Icon 
         size={iconSizes[size]} 
         weight={weight}
-        color={variant === 'primary' ? 'var(--main-blue)' : 'var(--text-secondary)'}
+        color={getIconColor()}
       />}
-      {variant === "primary" ? (
+      {(variant === "primary" || variant === "primary-special") ? (
         <span className={`A_Text A_Text--${variant === 'action_block' ? 'small' : 'regular'}`}>{text}</span>
       ) : text}
     </button>

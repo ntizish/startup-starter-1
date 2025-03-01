@@ -1,6 +1,8 @@
 import { saveImageDataOrExportToFigma } from './images'
 import { generateSlides } from "./renderSlides";
 
+figma.clientStorage.setAsync('onboardingCompleted', false); // TEMPORARY TO TEST ONBOARDING
+
 figma.showUI(__html__, { width: 540, height: 685 });
 
 figma.ui.onmessage = async (msg) => {
@@ -8,6 +10,11 @@ figma.ui.onmessage = async (msg) => {
 
   if (msg.type === 'image-in-bytes') {
     saveImageDataOrExportToFigma(msg.id, msg.bytes)
+  } else if (msg.type === 'SAVE_ONBOARDING_STATUS') {
+    await figma.clientStorage.setAsync('onboardingCompleted', msg.completed);
+  } else if (msg.type === 'GET_ONBOARDING_STATUS') {
+    const completed = await figma.clientStorage.getAsync('onboardingCompleted');
+    figma.ui.postMessage({ type: 'ONBOARDING_STATUS', completed: completed || false });
   } else if (msg.type === 'export') {
     // console.log(msg.pair)
     // setStoreImagesForExport(images)

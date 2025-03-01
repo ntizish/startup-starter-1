@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import A_Button from "./components/01_Atoms/A_Button";
 import P_Home from "./components/05_Pages/P_Home";
+import P_Onboarding from './components/05_Pages/P_Onboarding';
 // import * as React from 'react'
 // import * as ReactDOM from 'react-dom'
 
@@ -18,26 +19,41 @@ import P_Home from "./components/05_Pages/P_Home";
 //   return this
 // }
 
-export default class App extends React.Component {
-  constructor(params) {
-    super(params)
+const App = () => {
+  const [showOnboarding, setShowOnboarding] = useState(true);
 
-    // this.state = {}
+  const handleOnboardingComplete = () => {
+    setShowOnboarding(false);
+    // Send message to main plugin code to save the preference
+    parent.postMessage({ pluginMessage: { type: 'SAVE_ONBOARDING_STATUS', completed: true } }, '*');
+  };
 
-    // байндим метод с конктекстом класса
-    this.handleGenerateSlide = this.handleGenerateSlide.bind(this);
-  }
+  useEffect(() => {
+    // Request onboarding status when component mounts
+    parent.postMessage({ pluginMessage: { type: 'GET_ONBOARDING_STATUS' } }, '*');
 
-  handleGenerateSlide() {
+    // Listen for response from the main plugin code
+    const messageHandler = (event) => {
+      const message = event.data.pluginMessage;
+      if (message && message.type === 'ONBOARDING_STATUS') {
+        setShowOnboarding(!message.completed);
+      }
+    };
+
+    window.addEventListener('message', messageHandler);
+    return () => window.removeEventListener('message', messageHandler);
+  }, []);
+
+  const handleGenerateSlide = () => {
     // Send a message to the Figma plugin backend to generate the slide
     parent.postMessage({ pluginMessage: { type: 'generate-slide' } }, '*');
-  }
+  };
   
-  componentDidMount() {
-    this.setToStorage('hellou from plugin')
-  }
+  const componentDidMount = () => {
+    setToStorage('hellou from plugin')
+  };
 
-  getFromStorage = () => {
+  const getFromStorage = () => {
     parent.postMessage(
       {
         pluginMessage: {
@@ -46,9 +62,9 @@ export default class App extends React.Component {
       },
       '*'
     )
-  }
+  };
 
-  setToStorage = (id) => {
+  const setToStorage = (id) => {
     parent.postMessage(
       {
         pluginMessage: {
@@ -58,7 +74,7 @@ export default class App extends React.Component {
       },
       '*'
     )
-  }
+  };
 
   // exportPageToFigma = () => {
   //   // const { data } = this.props
@@ -75,12 +91,17 @@ export default class App extends React.Component {
   //   )
   // }
 
-  render() {
-    console.log("App is rendering!");  // Debugging App render
-    return (
-      <P_Home
-          onGenerate={this.handleGenerateSlide}
-      />
-    )
-  }
-}
+  return (
+    <div className="App">
+      {showOnboarding ? (
+        <P_Onboarding onComplete={handleOnboardingComplete} />
+      ) : (
+        <P_Home
+          onGenerate={handleGenerateSlide}
+        />
+      )}
+    </div>
+  );
+};
+
+export default App;

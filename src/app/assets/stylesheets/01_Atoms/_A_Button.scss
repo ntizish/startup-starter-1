@@ -8,6 +8,7 @@
   transition: all 0.2s;
   font-size: 14px;
   width: fit-content;
+  cursor: pointer;
   
   &--primary {
     background-color: vars.$light-blue;
@@ -18,7 +19,16 @@
     border-radius: 0;
     border-top: 1px solid rgba(vars.$main-blue, 0.32);
   }
-  
+
+  &--primary-special {
+    background-color: vars.$black;
+    color: vars.$white;
+    justify-content: center;
+    height: 82px;
+    width: 100vw;
+    border-radius: 0;
+  }
+
   &--secondary {
     background-color: transparent;
     color: vars.$text-secondary;
