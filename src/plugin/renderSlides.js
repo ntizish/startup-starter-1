@@ -14,6 +14,8 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
     const selectedTemplate = getTemplateByName(template);
     const selectedPalette = getPaletteByName(palette);
 
+    let xOffset = 0; // Track the x-position for each slide
+
     // iterating over slides templates
     Object.keys(selectedTemplate).forEach((slideKey, index) => {
         console.log(`Generating... Current template is ${slideKey}`) 
@@ -21,6 +23,9 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
             title: selectedTemplate[slideKey].title,
             elements: selectedTemplate[slideKey].elements,
         }).generateFrame(index);
+
+        frame.x = xOffset; // Set the x position of the frame
+        xOffset += frame.width + 64; // Increment xOffset by frame width plus 64px gap
 
         // Create all elements first and store them in an array
         const elementPromises = selectedTemplate[slideKey].elements.map(async (element) => {
