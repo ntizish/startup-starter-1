@@ -20,7 +20,8 @@ export default class SlideElement {
     letterSpacing,    // New: for letter spacing
     lineHeight,       // New: for line height
     fontWeight,       // New: for font weight (Regular, Medium, Bold, etc.)
-    rotation = 0       // Add default value of 0
+    rotation = 0,      // Add default value of 0
+    borderRadius = 0  // Add default value
   }) {
     this.type = type; // "text" | "image" | "shape"
     this.content = content; // Only for text
@@ -36,6 +37,7 @@ export default class SlideElement {
     this.lineHeight = lineHeight;
     this.fontWeight = fontWeight;
     this.rotation = rotation;
+    this.borderRadius = borderRadius;
   } 
 
     // !!! MOVE TO UTILS !!!
@@ -126,6 +128,11 @@ export default class SlideElement {
 
           if (this.rotation) {
             rect.rotation = this.rotation;
+          }
+
+          // Apply border radius if specified
+          if (this.borderRadius) {
+            rect.cornerRadius = this.borderRadius;
           }
 
           return rect;

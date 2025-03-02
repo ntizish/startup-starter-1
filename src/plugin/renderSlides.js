@@ -10,6 +10,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
 
     await figma.loadFontAsync({ family: font, style: "Regular" });
     await figma.loadFontAsync({ family: font, style: "Medium" });
+    await figma.loadFontAsync({ family: font, style: "Bold" });
 
     const selectedTemplate = getTemplateByName(template);
     const selectedPalette = getPaletteByName(palette);
@@ -45,6 +46,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
                 letterSpacing: element.letterSpacing,
                 lineHeight: element.lineHeight,
                 rotation: element.rotation,
+                borderRadius: element.borderRadius,
             });
             
             try {
