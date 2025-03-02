@@ -44,6 +44,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
                 fontWeight: element.fontWeight,
                 letterSpacing: element.letterSpacing,
                 lineHeight: element.lineHeight,
+                rotation: element.rotation,
             });
             
             try {

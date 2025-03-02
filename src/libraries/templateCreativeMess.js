@@ -24,7 +24,7 @@ const templateCreativeMess = {
       elements: [
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_3.1.png", position: [0, 0], size: [1920, 1080] },
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_3.2.png", position: [426, 30], size: [982, 646] },
-        { type: "text", content: "Problem", position: [664, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+        { type: "text", content: "Solution", position: [664, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "CENTER", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
         { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
         { type: "text", content: "Q1 2024", position: [360, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
         { type: "text", content: "The solution is simply so unique it’s even hard to comprehend, just buy it", position: [289, 676], color: '#000000', colorIndex: 1, fontSize: 96, size: [1342, 273], alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
@@ -35,10 +35,23 @@ const templateCreativeMess = {
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_4.1.png", position: [0, 0], size: [1920, 1080] },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_4.2.png", position: [664, 65], size: [460, 950] },
-      { type: "text", content: "Problem", position: [664, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+      { type: "text", content: "Solution", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+      { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Q1 2024", position: [360, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Functionality that’s tailored for your need on the go", position: [56, 471], color: '#000000', colorIndex: 1, fontSize: 32, size: [440, 150], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", position: [1272, 438], color: '#000000', colorIndex: 1, fontSize: 32, size: [440, 150], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Regular", letterSpacing: -1.1, lineHeight: 120 }
+    ]
+  },
+  marketSlide: {
+    title: "Market Slide",
+    elements: [
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_5.0.png", position: [0, 0], size: [1920, 1080] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_5.1.png", position: [228, 200], size: [618, 686], rotation: -47 },
+      { type: "text", content: "Market", position: [664, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "CENTER", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
       { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
       { type: "text", content: "Q1 2024", position: [360, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
     ]
   }
+}
   
   export default templateCreativeMess;

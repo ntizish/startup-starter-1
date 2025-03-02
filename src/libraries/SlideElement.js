@@ -19,7 +19,8 @@ export default class SlideElement {
     fontSize,
     letterSpacing,    // New: for letter spacing
     lineHeight,       // New: for line height
-    fontWeight        // New: for font weight (Regular, Medium, Bold, etc.)
+    fontWeight,       // New: for font weight (Regular, Medium, Bold, etc.)
+    rotation = 0       // Add default value of 0
   }) {
     this.type = type; // "text" | "image" | "shape"
     this.content = content; // Only for text
@@ -34,6 +35,7 @@ export default class SlideElement {
     this.letterSpacing = letterSpacing;
     this.lineHeight = lineHeight;
     this.fontWeight = fontWeight;
+    this.rotation = rotation;
   } 
 
     // !!! MOVE TO UTILS !!!
@@ -86,6 +88,10 @@ export default class SlideElement {
           // Load the font with the specified weight before setting characters
           // await figma.loadFontAsync(font);
 
+          if (this.rotation) {
+            text.rotation = this.rotation;
+          }
+
           return text;
           } catch (error) {
             console.error(`Text creation failed for ${this.content}:`, error);
@@ -117,6 +123,10 @@ export default class SlideElement {
             imageHash: image.hash,
             scaleMode: 'FILL'
           }];
+
+          if (this.rotation) {
+            rect.rotation = this.rotation;
+          }
 
           return rect;
         } catch (error) {
