@@ -64,7 +64,7 @@ const templateCreativeMess = {
   roadmapSlide: {
     title: "Roadmap Slide",
     elements: [
-      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_6.svg", position: [55, 251], size: [1734, 774] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_6.png", position: [55, 251], size: [1734, 774] },
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
       { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
       { type: "text", content: "Q1 2024", position: [360, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
@@ -85,10 +85,6 @@ const templateCreativeMess = {
       { type: "text", content: "Larger description of the work done in this stage. May be longer that a sentence and up to 7 lines of text.", position: [1000, 591], color: '#000000', colorIndex: 2, fontSize: 20, size: [332, 192], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
       { type: "text", content: "Larger description of the work done in this stage. May be longer that a sentence and up to 7 lines of text.", position: [1456, 591], color: '#000000', colorIndex: 2, fontSize: 20, size: [332, 192], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
     ]
-  },
-  teamSlide: {
-    title: "Team Slide",
-    elements: [
   }
 }
   
