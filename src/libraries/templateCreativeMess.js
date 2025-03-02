@@ -110,6 +110,43 @@ const templateCreativeMess = {
       { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [978, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
       { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [1434, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
     ]
-  }}
+  },
+  gallerySlide: {
+    title: "Gallery Slide",
+    elements: [
+      { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+      { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [56, 147], size: [288, 288], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [512, 318], size: [440, 288], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [360, 820], size: [288, 288], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [1120, 56], size: [288, 288], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [1272, 637], size: [592, 387], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [1576, -31], size: [288, 288], borderRadius: 24 },
+      { type: "text", content: "Brief description", position: [66, 451], color: '#000000', colorIndex: 2, fontSize: 20, size: [268, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Brief description", position: [370, 780], color: '#000000', colorIndex: 2, fontSize: 20, size: [268, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Brief description", position: [1586, 273], color: '#000000', colorIndex: 2, fontSize: 20, size: [268, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Brief description", position: [1126, 360], color: '#000000', colorIndex: 2, fontSize: 20, size: [268, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Brief description", position: [522, 622], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Brief description", position: [1288, 597], color: '#000000', colorIndex: 2, fontSize: 20, size: [560, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
+    ]
+  },
+  contactsSlide: {
+    title: "Contacts Slide",
+    elements: [
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.1.png", position: [0, 0], size: [1920, 1080] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.2.png", position: [362, 478], size: [1254, 1256] },
+      { type: "text", content: "Shape the world with us", position: [526, 143], color: '#000000', colorIndex: 1, fontSize: 96, size: [838, 182], alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.3.png", position: [619, 397], size: [50, 50] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.4.png", position: [870, 397], size: [50, 50] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.5.png", position: [1102, 397], size: [50, 50] },
+      { type: "text", content: "wanna@email.me", position: [675, 410], color: '#000000', colorIndex: 2, fontSize: 20, size: [180, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "wanna_text_me", position: [926, 410], color: '#000000', colorIndex: 2, fontSize: 20, size: [180, 24], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "wanna-see.me", position: [1158, 410], color: '#000000', colorIndex: 2, fontSize: 20, size: [180, 24], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Project name", position: [664, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "CENTER", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+      { type: "text", content: "Q1 2024", position: [1425, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "RIGHT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Event Name", position: [104, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
+    ]
+  }
+}
   
   export default templateCreativeMess;
