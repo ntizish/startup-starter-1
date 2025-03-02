@@ -85,7 +85,31 @@ const templateCreativeMess = {
       { type: "text", content: "Larger description of the work done in this stage. May be longer that a sentence and up to 7 lines of text.", position: [1000, 591], color: '#000000', colorIndex: 2, fontSize: 20, size: [332, 192], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
       { type: "text", content: "Larger description of the work done in this stage. May be longer that a sentence and up to 7 lines of text.", position: [1456, 591], color: '#000000', colorIndex: 2, fontSize: 20, size: [332, 192], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
     ]
-  }
-}
+  },
+  teamSlide: {
+    title: "Team Slide",
+    elements: [
+      { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
+      { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Q1 2024", position: [360, 1024], color: '#000000', colorIndex: 2, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [56, 396], size: [440, 308], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [512, 396], size: [440, 308], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [968, 396], size: [440, 308], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.5.png", position: [1424, 396], size: [440, 308], borderRadius: 24 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.2.png", position: [705, 123], size: [310, 204] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.1.png", position: [1343, 29], size: [474, 312]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.3.png", position: [1120, 38], size: [568, 374] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.4.png", position: [1335, -37], size: [796, 524] },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_7.6.png", position: [390, 679], size: [86, 50] },
+      { type: "text", content: "Team Player #1", position: [66, 734], color: '#000000', colorIndex: 1, fontSize: 32, size: [420, 38], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Team Player #2", position: [522, 736], color: '#000000', colorIndex: 1, fontSize: 32, size: [420, 38], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Team Player #3", position: [978, 736], color: '#000000', colorIndex: 1, fontSize: 32, size: [420, 38], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Team Player #4", position: [1434, 736], color: '#000000', colorIndex: 1, fontSize: 32, size: [420, 38], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [66, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [522, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [978, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 },
+      { type: "text", content: "Larger description of a person. May be longer that a sentence and up to 4 lines of text.", position: [1434, 786], color: '#000000', colorIndex: 2, fontSize: 20, size: [420, 96], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 120 }
+    ]
+  }}
   
   export default templateCreativeMess;
