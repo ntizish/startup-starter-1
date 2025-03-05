@@ -8,10 +8,6 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
     {
       id: 'Inter',
       name: 'Inter',
-    },
-    {
-      id: 'Oswald',
-      name: 'Oswald',
     }
   ];
 
