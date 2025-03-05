@@ -2,6 +2,7 @@ import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
 import templateCreativeMess from "../libraries/templateCreativeMess";
 import CM1 from "../libraries/palettes/CM1";
+import CM2 from "../libraries/palettes/CM2";
 // Function to generate slides
 export async function generateSlides({ template = 'Default', palette = 'Default', font = 'Default', projectName = 'Untitled' }) {
 
@@ -23,6 +24,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
         const frame = new Slide({
             title: selectedTemplate[slideKey].title,
             elements: selectedTemplate[slideKey].elements,
+            palette: selectedPalette
         }).generateFrame(index);
 
         frame.x = xOffset; // Set the x position of the frame
@@ -87,7 +89,8 @@ function getTemplateByName(templateName) {
 
 function getPaletteByName(paletteName) {
     const palettes = {
-        'CM1': CM1
+        'CM1': CM1,
+        'CM2': CM2
     };
     
     return palettes[paletteName]?.colors;

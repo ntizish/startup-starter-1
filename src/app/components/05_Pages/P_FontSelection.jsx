@@ -11,7 +11,7 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
 
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+      <div className="content-container">
         <M_GenerationNav onBack={onBack} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>

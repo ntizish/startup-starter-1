@@ -1,8 +1,8 @@
 @use '../vars';
 
 .M_GenerationNav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -12,9 +12,12 @@
     border-bottom: 1px solid vars.$border-default;
 
     p {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        grid-column: 2;
         margin: 0;
+        text-align: center;
+    }
+
+    a {
+        grid-column: 1;
     }
 }

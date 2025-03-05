@@ -4,26 +4,44 @@ import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 import M_PaletteOption from '../02_Molecules/M_PaletteOption';
 
 export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, onPaletteSelect }) {
-  const palette = {
-    id: 'CM1',
-    colors: ['#FFFFFF', '#000000', '#8D8D8D'],
-    tags: [
-      { 
-        text: "Minimal", 
-        backgroundColor: "#E5E7EB",
-        textColor: "#374151"
-      },
-      { 
-        text: "Modern", 
-        backgroundColor: "#C1EEBB",
-        textColor: "#28661E"
-      }
-    ]
-  };
+  const palettes = [
+    {
+      id: 'CM1',
+      colors: ['#FFFFFF', '#000000', '#8D8D8D'],
+      tags: [
+        { 
+          text: "Minimal", 
+          backgroundColor: "#E5E7EB",
+          textColor: "#374151"
+        },
+        { 
+          text: "Modern", 
+          backgroundColor: "#C1EEBB",
+          textColor: "#28661E"
+        }
+      ]
+    },
+    {
+      id: 'CM2',
+      colors: ['#CBCCD0', '#FFFFFF', '#92959E'],
+      tags: [
+        { 
+          text: "Creative", 
+          backgroundColor: "#FDE68A",
+          textColor: "#92400E"
+        },
+        { 
+          text: "Modern", 
+          backgroundColor: "#C1EEBB",
+          textColor: "#28661E"
+        }
+      ]
+    }
+  ];
 
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+      <div className="content-container">
         <M_GenerationNav onBack={onBack} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
@@ -39,15 +57,18 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
           </div>
           
           <div className="template-options" style={{width: '100%'}}>
-            <M_PaletteOption
-              colors={palette.colors}
-              tags={palette.tags}
-              isSelected={selectedPalette === palette.id}
-              onClick={() => {
-                console.log('Palette selected:', palette.id);
-                onPaletteSelect(palette.id);
-              }}
-            />
+            {palettes.map((palette) => (
+              <M_PaletteOption
+                key={palette.id}
+                colors={palette.colors}
+                tags={palette.tags}
+                isSelected={selectedPalette === palette.id}
+                onClick={() => {
+                  console.log('Palette selected:', palette.id);
+                  onPaletteSelect(palette.id);
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>

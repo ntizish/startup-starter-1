@@ -8,7 +8,7 @@ import creativeMessPreview from '../../assets/images/slides/CM/preview.png';
 export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate, onTemplateSelect }) {
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center' }}>
+      <div className="content-container">
         <M_GenerationNav onBack={onBack} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
