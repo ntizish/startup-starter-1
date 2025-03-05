@@ -4,10 +4,16 @@ import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 import M_FontOption from '../02_Molecules/M_FontOption';
 
 export default function P_FontSelection({ onSelect, onBack, selectedFont, onFontSelect }) {
-  const font = {
-    id: 'Inter',
-    name: 'Inter',
-  };
+  const fonts = [
+    {
+      id: 'Inter',
+      name: 'Inter',
+    },
+    {
+      id: 'Oswald',
+      name: 'Oswald',
+    }
+  ];
 
   return (
     <div className="P_ParameterSelection">
@@ -27,14 +33,17 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
           </div>
           
           <div className="template-options" style={{width: '100%'}}>
-            <M_FontOption
-              font={font}
-              isSelected={selectedFont === font.id}
-              onClick={() => {
-                console.log('Font selected:', font.id);
-                onFontSelect(font.id);
-              }}
-            />
+            {fonts.map((font) => (
+              <M_FontOption
+                key={font.id}
+                font={font}
+                isSelected={selectedFont === font.id}
+                onClick={() => {
+                  console.log('Font selected:', font.id);
+                  onFontSelect(font.id);
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
