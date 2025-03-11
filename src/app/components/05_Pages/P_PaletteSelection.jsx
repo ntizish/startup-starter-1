@@ -20,22 +20,6 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
           textColor: "#28661E"
         }
       ]
-    },
-    {
-      id: 'CM2',
-      colors: ['#CBCCD0', '#FFFFFF', '#92959E'],
-      tags: [
-        { 
-          text: "Creative", 
-          backgroundColor: "#FDE68A",
-          textColor: "#92400E"
-        },
-        { 
-          text: "Modern", 
-          backgroundColor: "#C1EEBB",
-          textColor: "#28661E"
-        }
-      ]
     }
   ];
 

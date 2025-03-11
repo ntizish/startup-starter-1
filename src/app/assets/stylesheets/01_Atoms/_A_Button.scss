@@ -18,6 +18,10 @@
     width: 100vw;
     border-radius: 0;
     border-top: 1px solid rgba(vars.$main-blue, 0.32);
+
+    &:hover {
+      background-color: vars.$primary-hover;
+    }
   }
 
   &--primary-special {
@@ -27,11 +31,19 @@
     height: 82px;
     width: 100vw;
     border-radius: 0;
+
+    &:hover {
+      background-color: vars.$secondary-hover;
+    }
   }
 
   &--secondary {
     background-color: transparent;
     color: vars.$text-secondary;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &--action_block {
@@ -45,5 +57,9 @@
     height: 100%;
     border-radius: vars.$rounding-block;
     border: 1px solid vars.$border-default;
+
+    &:hover {
+      background-color: vars.$card-border;
+    }
   }
 } 
