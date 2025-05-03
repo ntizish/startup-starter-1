@@ -8,6 +8,7 @@ const templateCreativeMess = {
         availableFonts: ['Inter', 'Space Grotesk']
     },
     titleSlide: {
+      backgroundColorIndex: 0,
       title: "Title Slide",
       elements: [
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_1.png", position: [0, 0], size: [1920, 1080] },
@@ -15,6 +16,7 @@ const templateCreativeMess = {
         { type: "text", content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", position: [664, 870], color: '#000000', colorIndex: 1, fontSize: 20, size: [592, 160], alignHorizontal: "CENTER", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 120  }]
     },
     problemSlide: {
+      backgroundColorIndex: 0,
       title: "Problem Slide",
       elements: [
         { type: "text", content: "Problem", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
@@ -26,6 +28,7 @@ const templateCreativeMess = {
       ]
     },
     solutionSlide: {
+      backgroundColorIndex: 0,
       title: "Solution Slide",
       elements: [
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_3.1.png", position: [0, 0], size: [1920, 1080] },
@@ -37,6 +40,7 @@ const templateCreativeMess = {
       ]
     },
    demoSlide: {
+    backgroundColorIndex: 0,
     title: "Demo Slide",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_4.1.png", position: [0, 0], size: [1920, 1080] },
@@ -49,6 +53,7 @@ const templateCreativeMess = {
     ]
   },
   marketSlide: {
+    backgroundColorIndex: 0,
     title: "Market Slide",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_5.0.png", position: [0, 0], size: [1920, 1080] },
@@ -68,6 +73,7 @@ const templateCreativeMess = {
     ]
   },
   roadmapSlide: {
+    backgroundColorIndex: 0,
     title: "Roadmap Slide",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_6.png", position: [55, 251], size: [1734, 774] },
@@ -93,6 +99,7 @@ const templateCreativeMess = {
     ]
   },
   teamSlide: {
+    backgroundColorIndex: 0,
     title: "Team Slide",
     elements: [
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
@@ -118,6 +125,7 @@ const templateCreativeMess = {
     ]
   },
   gallerySlide: {
+    backgroundColorIndex: 0,
     title: "Gallery Slide",
     elements: [
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
@@ -137,6 +145,7 @@ const templateCreativeMess = {
     ]
   },
   contactsSlide: {
+    backgroundColorIndex: 0,
     title: "Contacts Slide",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.1.png", position: [0, 0], size: [1920, 1080] },

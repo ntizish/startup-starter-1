@@ -1,9 +1,9 @@
 import templateCreativeMess from './templateCreativeMess';
-import templateMinimalist from './templateMinimalist';
+import templateBold from './templateBold';
 import CM1 from './palettes/CM1';
 import CM2 from './palettes/CM2';
 import CM3 from './palettes/CM3';
-
+import BOLD1 from './palettes/BOLD1';
 // Registry of all available templates
 const templates = {
   'CreativeMess': templateCreativeMess,
@@ -14,7 +14,8 @@ const templates = {
 const palettes = {
   'CM1': CM1,
   'CM2': CM2,
-  'CM3': CM3
+  'CM3': CM3,
+  'BOLD1': BOLD1
 };
 
 // Get template by name

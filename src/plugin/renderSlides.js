@@ -32,9 +32,10 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
         // Skip the metadata key
         if (slideKey === 'metadata') return;
         
-        console.log(`Generating... Current template is ${slideKey}`) 
+        console.log(`Generating... Current template is ${slideKey}`)
         const frame = new Slide({
             title: selectedTemplate[slideKey].title,
+            backgroundColorIndex: selectedTemplate[slideKey].backgroundColorIndex,
             elements: selectedTemplate[slideKey].elements,
             palette: selectedPalette
         }).generateFrame(index);

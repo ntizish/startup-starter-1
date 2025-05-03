@@ -21,7 +21,7 @@ export default class SlideElement {
     lineHeight,       // New: for line height
     fontWeight,       // New: for font weight (Regular, Medium, Bold, etc.)
     rotation = 0,      // Add default value of 0
-    borderRadius = 0  // Add default value
+    borderRadius = 0
   }) {
     this.type = type; // "text" | "image" | "shape"
     this.content = content; // Only for text
