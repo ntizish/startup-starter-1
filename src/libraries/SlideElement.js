@@ -21,9 +21,10 @@ export default class SlideElement {
     lineHeight,       // New: for line height
     fontWeight,       // New: for font weight (Regular, Medium, Bold, etc.)
     rotation = 0,      // Add default value of 0
-    borderRadius = 0
+    borderRadius = 0,
+    opacity = 1        // New: for element opacity (0-1)
   }) {
-    this.type = type; // "text" | "image" | "shape"
+    this.type = type; // "text" | "image" | "shape" | "rectangle"
     this.content = content; // Only for text
     this.position = position; // [x, y]
     this.font = font;
@@ -38,6 +39,7 @@ export default class SlideElement {
     this.fontWeight = fontWeight;
     this.rotation = rotation;
     this.borderRadius = borderRadius;
+    this.opacity = opacity; // New: opacity value between 0 and 1
   } 
 
     // !!! MOVE TO UTILS !!!
@@ -92,7 +94,7 @@ export default class SlideElement {
 
           text.fontName = font;
           text.characters = String(this.content || "Placeholder Text");
-          text.fills = [{ type: "SOLID", color: hexToRgb(this.color) }];
+          text.fills = [{ type: "SOLID", color: hexToRgb(this.color), opacity: this.opacity }];
           text.x = this.position[0];
           text.y = this.position[1];
           text.resize(this.size[0], this.size[1]);
@@ -141,7 +143,8 @@ export default class SlideElement {
           rect.fills = [{
             type: 'IMAGE',
             imageHash: image.hash,
-            scaleMode: 'FILL'
+            scaleMode: 'FILL',
+            opacity: this.opacity
           }];
 
           if (this.rotation) {
@@ -156,6 +159,42 @@ export default class SlideElement {
           return rect;
         } catch (error) {
           console.error('Error creating image:', error);
+          return null;
+        }
+      } else if (this.type === "rectangle") {
+        try {
+          // Create a rectangle element
+          const rect = figma.createRectangle();
+          rect.x = this.position[0];
+          rect.y = this.position[1];
+          
+          // Set size
+          if (this.size) {
+            rect.resize(this.size[0], this.size[1]);
+          }
+          
+          // Set fill color if provided
+          if (this.color) {
+            rect.fills = [{
+              type: 'SOLID',
+              color: hexToRgb(this.color),
+              opacity: this.opacity
+            }];
+          }
+          
+          // Apply rotation if specified
+          if (this.rotation) {
+            rect.rotation = this.rotation;
+          }
+          
+          // Apply border radius if specified
+          if (this.borderRadius) {
+            rect.cornerRadius = this.borderRadius;
+          }
+          
+          return rect;
+        } catch (error) {
+          console.error('Error creating rectangle:', error);
           return null;
         }
       }

@@ -62,6 +62,7 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
                 lineHeight: element.lineHeight,
                 rotation: element.rotation,
                 borderRadius: element.borderRadius,
+                opacity: element.opacity
             });
             
             try {
