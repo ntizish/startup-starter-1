@@ -1,7 +1,7 @@
 // Template definition for minimalist style
-const templateMinimalist = {
+const templateBold = {
   metadata: {
-    name: "Minimalist",
+    name: "Bold",
     description: "Clean and simple designs with ample white space",
     availablePalettes: ['CM1', 'CM3'], // This template works best with these palettes
     availableFonts: ['Inter', 'Poppins'] // This template works best with these fonts
@@ -35,4 +35,4 @@ const templateMinimalist = {
   // Add more slides as needed for this template
 };
 
-export default templateMinimalist; 
+export default templateBold; 

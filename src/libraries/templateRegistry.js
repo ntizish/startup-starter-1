@@ -6,7 +6,8 @@ import CM3 from './palettes/CM3';
 
 // Registry of all available templates
 const templates = {
-  'CreativeMess': templateCreativeMess
+  'CreativeMess': templateCreativeMess,
+  'Bold': templateBold
 };
 
 // Registry of all available palettes
