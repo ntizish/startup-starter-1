@@ -1,6 +1,6 @@
 import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
-import templateCreativeMess from "../libraries/templateCreativeMess";
+import { getTemplateByName, getPaletteByName } from "../libraries/templateRegistry";
 import CM1 from "../libraries/palettes/CM1";
 import CM2 from "../libraries/palettes/CM2";
 // Function to generate slides
@@ -20,6 +20,9 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
 
     // iterating over slides templates
     Object.keys(selectedTemplate).forEach((slideKey, index) => {
+        // Skip the metadata key
+        if (slideKey === 'metadata') return;
+        
         console.log(`Generating... Current template is ${slideKey}`) 
         const frame = new Slide({
             title: selectedTemplate[slideKey].title,
@@ -79,24 +82,6 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
     });
 }
 
-function getTemplateByName(templateName) {
-    const templates = {
-        'CreativeMess': templateCreativeMess
-    };
-    
-    return templates[templateName];
-}
-
-function getPaletteByName(paletteName) {
-    const palettes = {
-        'CM1': CM1,
-        'CM2': CM2
-    };
-    
-    return palettes[paletteName]?.colors;
-}
-
 function getColorByIndex(selectedPalette, index) {
-    
     return selectedPalette[index];
 }

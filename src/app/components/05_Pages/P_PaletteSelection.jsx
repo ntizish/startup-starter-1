@@ -1,27 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import A_Button from '../01_Atoms/A_Button';
 import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 import M_PaletteOption from '../02_Molecules/M_PaletteOption';
+import { getPalettesForTemplate } from '../../../libraries/templateRegistry';
 
-export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, onPaletteSelect }) {
-  const palettes = [
-    {
-      id: 'CM1',
-      colors: ['#FFFFFF', '#000000', '#8D8D8D'],
-      tags: [
-        { 
-          text: "Minimal", 
-          backgroundColor: "#E5E7EB",
-          textColor: "#374151"
-        },
-        { 
-          text: "Modern", 
-          backgroundColor: "#C1EEBB",
-          textColor: "#28661E"
-        }
-      ]
-    }
-  ];
+export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, onPaletteSelect, selectedTemplate }) {
+  const [availablePalettes, setAvailablePalettes] = useState([]);
+  
+  useEffect(() => {
+    // Make sure we have a selectedTemplate
+    if (!selectedTemplate) return;
+    
+    // Get all available palettes for the selected template
+    const palettes = getPalettesForTemplate(selectedTemplate);
+    setAvailablePalettes(palettes);
+  }, [selectedTemplate]);
 
   return (
     <div className="P_ParameterSelection">
@@ -41,7 +34,7 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
           </div>
           
           <div className="template-options" style={{width: '100%'}}>
-            {palettes.map((palette) => (
+            {availablePalettes.map((palette) => (
               <M_PaletteOption
                 key={palette.id}
                 colors={palette.colors}

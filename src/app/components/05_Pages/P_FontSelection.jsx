@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import A_Button from '../01_Atoms/A_Button';
 import M_GenerationNav from '../02_Molecules/M_GenerationNav';
 import M_FontOption from '../02_Molecules/M_FontOption';
+import { getFontsForTemplate } from '../../../libraries/templateRegistry';
 
-export default function P_FontSelection({ onSelect, onBack, selectedFont, onFontSelect }) {
-  const fonts = [
-    {
-      id: 'Inter',
-      name: 'Inter',
-    }
-  ];
+export default function P_FontSelection({ onSelect, onBack, selectedFont, onFontSelect, selectedTemplate }) {
+  const [availableFonts, setAvailableFonts] = useState([]);
+  
+  useEffect(() => {
+    // Make sure we have a selectedTemplate
+    if (!selectedTemplate) return;
+    
+    // Get all available fonts for the selected template
+    const fonts = getFontsForTemplate(selectedTemplate);
+    setAvailableFonts(fonts);
+  }, [selectedTemplate]);
 
   return (
     <div className="P_ParameterSelection">
@@ -29,7 +34,7 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
           </div>
           
           <div className="template-options" style={{width: '100%'}}>
-            {fonts.map((font) => (
+            {availableFonts.map((font) => (
               <M_FontOption
                 key={font.id}
                 font={font}

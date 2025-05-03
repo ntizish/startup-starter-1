@@ -1,9 +1,9 @@
 import { hexToRgb } from "./colorManagement";
 import CM_1 from '../app/assets/images/slides/CM/CM_1.png';
 
-const imageMap = {
-  'src/app/assets/images/slides/CM/CM_1.png': CM_1
-};
+// const imageMap = {
+//   'src/app/assets/images/slides/CM/CM_1.png': CM_1
+// };
 
 export default class SlideElement {
   constructor({ 

@@ -86,6 +86,7 @@ export default function P_Generator({ onComplete, onCancel }) {
             onBack={() => setCurrentStep(STEPS.TEMPLATE)}
             selectedPalette={selections.palette}
             onPaletteSelect={(palette) => handleSelection('palette', palette)}
+            selectedTemplate={selections.template}
           />
         );
       case STEPS.FONT:
@@ -95,6 +96,7 @@ export default function P_Generator({ onComplete, onCancel }) {
             onBack={() => setCurrentStep(STEPS.PALETTE)}
             selectedFont={selections.font}
             onFontSelect={(font) => handleSelection('font', font)}
+            selectedTemplate={selections.template}
           />
         );
       case STEPS.NAME:
