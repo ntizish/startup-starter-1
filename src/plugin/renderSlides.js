@@ -1,6 +1,7 @@
 import Slide from "../libraries/Slide";
 import SlideElement from "../libraries/SlideElement";
 import { getTemplateByName, getPaletteByName } from "../libraries/templateRegistry";
+import { getFontWeights } from "../libraries/fontUtils";
 import CM1 from "../libraries/palettes/CM1";
 import CM2 from "../libraries/palettes/CM2";
 // Function to generate slides
@@ -8,10 +9,18 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
 
     console.log('Received selections:', { template, palette, font, projectName });
     
-
-    await figma.loadFontAsync({ family: font, style: "Regular" });
-    await figma.loadFontAsync({ family: font, style: "Medium" });
-    await figma.loadFontAsync({ family: font, style: "Bold" });
+    // Get all available weights for the selected font and load them
+    const fontWeights = getFontWeights(font);
+    console.log(`Loading font weights for ${font}:`, fontWeights);
+    
+    // Load all font weights for the selected font
+    const fontLoadPromises = fontWeights.map(weight => 
+        figma.loadFontAsync({ family: font, style: weight })
+        .catch(err => console.error(`Failed to load font ${font} ${weight}:`, err))
+    );
+    
+    // Wait for all fonts to be loaded
+    await Promise.all(fontLoadPromises);
 
     const selectedTemplate = getTemplateByName(template);
     const selectedPalette = getPaletteByName(palette);

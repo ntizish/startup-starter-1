@@ -60,17 +60,38 @@ export default class SlideElement {
       
       if (this.type === "text") {
         try {
-          console.log(`Trying to add text: ${this.content} with font: ${this.font}`);
+          console.log(`Trying to add text: ${this.content} with font: ${this.font} style: ${this.fontWeight || "Regular"}`);
 
           const font = { 
             family: this.font, 
             style: this.fontWeight || "Regular" 
           };
           
+          // First, ensure the font is loaded
+          try {
+            // Double-check that the font is loaded before creating the text element
+            await figma.loadFontAsync(font);
+          } catch (fontError) {
+            console.error(`Font loading error for ${this.font} ${this.fontWeight}:`, fontError);
+            // Try with "Regular" as fallback
+            if (this.fontWeight !== "Regular") {
+              font.style = "Regular";
+              try {
+                await figma.loadFontAsync(font);
+                console.log(`Falling back to ${this.font} Regular`);
+              } catch (fallbackError) {
+                console.error(`Even fallback font failed to load:`, fallbackError);
+                return null;
+              }
+            } else {
+              return null;
+            }
+          }
+          
           const text = figma.createText();
 
-          text.characters = String(this.content || "Placeholder Text");
           text.fontName = font;
+          text.characters = String(this.content || "Placeholder Text");
           text.fills = [{ type: "SOLID", color: hexToRgb(this.color) }];
           text.x = this.position[0];
           text.y = this.position[1];
@@ -87,18 +108,15 @@ export default class SlideElement {
             text.lineHeight = { value: this.lineHeight, unit: 'PERCENT' };
           }
 
-          // Load the font with the specified weight before setting characters
-          // await figma.loadFontAsync(font);
-
           if (this.rotation) {
             text.rotation = this.rotation;
           }
 
           return text;
-          } catch (error) {
-            console.error(`Text creation failed for ${this.content}:`, error);
-            return null;
-          }
+        } catch (error) {
+          console.error(`Text creation failed for ${this.content}:`, error);
+          return null;
+        }
       } else if (this.type === "image") {
         
         try {
