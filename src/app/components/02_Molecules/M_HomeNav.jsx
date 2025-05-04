@@ -23,6 +23,7 @@ const M_HomeNav = () => {
         icon={Lifebuoy}
         text="Help"
         variant="secondary"
+        onClick={() => window.open('https://t.me/esdnt', '_blank')}
       />
     </nav>
   );

@@ -14,13 +14,13 @@
     background-color: vars.$light-blue;
     justify-content: center;
     color: vars.$main-blue;
-    height: 82px;
+    height: 64px;
     width: 100vw;
     border-radius: 0;
     border-top: 1px solid rgba(vars.$main-blue, 0.32);
 
     &:hover {
-      background-color: vars.$primary-hover;
+      background-color: rgba(vars.$primary-hover, 0.4);
     }
   }
 
@@ -56,11 +56,9 @@
     width: 100%;
     height: 100%;
     border-radius: vars.$rounding-block;
-    // border: 1px solid vars.$border-default;
 
     &:hover {
-      background-color: vars.$primary-hover;
-      color: vars.$main-blue;
+      background-color: rgba(vars.$primary-hover, 0.4);
     }
   }
 } 

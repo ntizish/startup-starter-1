@@ -26,7 +26,7 @@ export default function P_ProjectNaming({ onComplete, onBack, projectName, onNam
 
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center', width: '100%', padding: '20px 0 0 0' }}>
         <M_GenerationNav onBack={onBack} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>

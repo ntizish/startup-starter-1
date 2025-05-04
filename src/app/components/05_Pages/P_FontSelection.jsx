@@ -33,7 +33,7 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
             <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px'}}>Select the perfect font for your project</h1>
           </div>
           
-          <div className="template-options" style={{width: '100%'}}>
+          <div className="template-options" style={{width: '100%', padding: '0 0 24px 0'}}>
             {availableFonts.map((font) => (
               <M_FontOption
                 key={font.id}

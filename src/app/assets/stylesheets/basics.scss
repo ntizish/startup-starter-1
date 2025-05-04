@@ -1,3 +1,5 @@
+@use './vars';
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +9,37 @@ body {
   color: var(--black);
   background: var(--white);
   user-select: none;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(vars.$white, 0);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(vars.$white, 0);
+  }
+  
+  /* Hide scrollbar when not scrolling */
+  overflow: auto;
+  scrollbar-width: thin; /* For Firefox */
+  
+  /* For modern browsers that support the spec */
+  &:not(:hover):not(:focus-within) {
+    scrollbar-width: none; /* Firefox */
+    
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Edge */
+    }
+  }
 }
 
 
