@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   // border: 1px solid transparent;
-  opacity: 0.8;
+  opacity: 0.4;
   border-radius: vars.$rounding-block;
   overflow: hidden;
   padding: 0;
@@ -15,6 +15,10 @@
   &.selected {
     opacity: 1;
     // border-color: vars.$grey;
+  }
+  
+  &:hover {
+    opacity: 0.6;
   }
 
   .template-image {

@@ -30,7 +30,7 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
               <div className="A_StepDot A_StepDot--small"></div>
             </div>
 
-            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px', padding: '0 0 24px 0'}}>Select the perfect font for your project</h1>
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px'}}>Select the perfect font for your project</h1>
           </div>
           
           <div className="template-options" style={{width: '100%'}}>

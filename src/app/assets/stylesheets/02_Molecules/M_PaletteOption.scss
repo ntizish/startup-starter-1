@@ -4,7 +4,7 @@
   width: 100%;
   background: vars.$background-grey;
   border-radius: 122px;
-  opacity: 0.8;
+  opacity: 0.4;
   padding: 8px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -12,6 +12,10 @@
 
   &.selected {
     opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.6;
   }
 
   .palette-preview {

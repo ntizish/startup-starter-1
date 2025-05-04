@@ -6,7 +6,7 @@ import manualImage from '../../assets/images/illustrations/manual.png';
 export default function P_GeneratedDeck({ onBack, onClose }) {
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%', padding: '0 0 24px 0' }}>
         <M_GenerationNav onBack={onBack} hideBackButton={true} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>

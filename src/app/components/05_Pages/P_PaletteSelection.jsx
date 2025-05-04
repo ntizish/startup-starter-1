@@ -30,7 +30,7 @@ export default function P_PaletteSelection({ onSelect, onBack, selectedPalette, 
               <div className="A_StepDot A_StepDot--small"></div>
             </div>
 
-            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px', padding: '0 0 24px 0'}}>What palette suits your project the best?</h1>
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px'}}>What palette suits your project the best?</h1>
           </div>
           
           <div className="template-options" style={{width: '100%'}}>
