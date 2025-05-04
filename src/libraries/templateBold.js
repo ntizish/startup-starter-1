@@ -4,7 +4,7 @@ const templateBold = {
     name: "Bold",
     description: "Clean and simple designs with ample white space",
     availablePalettes: ['BOLD1'], // This template works best with these palettes
-    availableFonts: ['Archivo', 'Parkinsans'] // This template works best with these fonts
+    availableFonts: ['Archivo', 'Parkinsans', 'Montserrat Alternates'] // This template works best with these fonts
   },
   titleSlide: {
     backgroundColorIndex: 0,

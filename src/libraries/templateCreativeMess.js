@@ -5,7 +5,7 @@ const templateCreativeMess = {
         name: "Creative Mess",
         description: "Modern design with creative elements",
         availablePalettes: ['CM1', 'CM2', 'CM3'],
-        availableFonts: ['Inter', 'Space Grotesk']
+        availableFonts: ['Inter', 'Space Grotesk', 'Chakra Petch']
     },
     titleSlide: {
       backgroundColorIndex: 0,
