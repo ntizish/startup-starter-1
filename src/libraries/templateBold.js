@@ -49,7 +49,6 @@ const templateBold = {
     backgroundColorIndex: 1,
     title: "Solution Slide",
     elements: [
-      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_3.png", position: [664, 620], size: [896, 460]},
       { type: "rectangle", position: [700, 566.89], size: [896, 458], colorIndex: 2, rotation: 3.0 },
       { type: "text", position: [56, 53], size: [1808, 381], content: "The solution is simply so unique it’s even hard to comprehend", colorIndex: 0, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
@@ -57,6 +56,7 @@ const templateBold = {
       { type: "rectangle", position: [1574, 531], size: [12, 12], colorIndex: 1, borderRadius: 9999, rotation: -3.0 },
       { type: "rectangle", position: [707, 580], size: [12, 12], colorIndex: 1, borderRadius: 9999, rotation: -3.0 },
       { type: "rectangle", position: [1598, 960], size: [12, 12], colorIndex: 1, borderRadius: 9999, rotation: -3.0 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_3.png", position: [664, 620], size: [896, 460]}
     ]
   },
   solutionSlide2: {
@@ -139,6 +139,10 @@ const templateBold = {
       { type: "rectangle", position: [928, 1056], size: [12, 12], colorIndex: 1, borderRadius: 9999 },
       { type: "rectangle", position: [1384, 1056], size: [12, 12], colorIndex: 1, borderRadius: 9999 },
       { type: "rectangle", position: [1840, 1056], size: [12, 12], colorIndex: 1, borderRadius: 9999 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_6.png", position: [68, 224], size: [416, 416]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_7.png", position: [524, 224], size: [416, 416]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_8.png", position: [980, 224], size: [416, 416]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_9.png", position: [1436, 224], size: [416, 416]}
     ]
   },
   gallerySlide: {
@@ -146,6 +150,11 @@ const templateBold = {
     title: "Gallery Slide",
     elements: [
       { type: "text", position: [56, 53], size: [608, 78], content: "Gallery heading", colorIndex: 1, fontSize: 80, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 90 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [56, 239], size: [896, 785]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [968, 239], size: [440, 384]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [1424, 239], size: [440, 384]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [968, 639.5], size: [440, 384]},
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [1424, 639.5], size: [440, 384]}
     ]
   },
   contactSlide: {
