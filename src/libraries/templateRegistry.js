@@ -5,7 +5,12 @@ import CM1 from './palettes/CM1';
 import CM2 from './palettes/CM2';
 import CM3 from './palettes/CM3';
 import BOLD1 from './palettes/BOLD1';
+import BOLD2 from './palettes/BOLD2';
+import BOLD3 from './palettes/BOLD3';
 import BRUTAL1 from './palettes/BRUTAL1';
+import BRUTAL2 from './palettes/BRUTAL2';
+import BRUTAL3 from './palettes/BRUTAL3';
+
 // Registry of all available templates
 const templates = {
   'CreativeMess': templateCreativeMess,
@@ -19,7 +24,11 @@ const palettes = {
   'CM2': CM2,
   'CM3': CM3,
   'BOLD1': BOLD1,
-  'BRUTAL1': BRUTAL1
+  'BOLD2': BOLD2,
+  'BOLD3': BOLD3,
+  'BRUTAL1': BRUTAL1,
+  'BRUTAL2': BRUTAL2,
+  'BRUTAL3': BRUTAL3
 };
 
 // Get template by name

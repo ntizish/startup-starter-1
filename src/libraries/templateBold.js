@@ -5,7 +5,7 @@ const templateBold = {
   metadata: {
     name: "Bold",
     description: "Clean and simple designs with ample white space",
-    availablePalettes: ['BOLD1'], // This template works best with these palettes
+    availablePalettes: ['BOLD1', 'BOLD2', 'BOLD3'], // This template works best with these palettes
     availableFonts: ['Archivo', 'Parkinsans', 'Montserrat Alternates'], // This template works best with these fonts
     preview: preview,
     tags: [

@@ -5,7 +5,7 @@ const templateBrutal = {
     metadata: {
         name: "Brutal",
         description: "Brutal design with bold elements",
-        availablePalettes: ['BRUTAL1'],
+        availablePalettes: ['BRUTAL1', 'BRUTAL2', 'BRUTAL3'],
         availableFonts: ['Archivo Narrow', 'Outfit', 'Mate'],
         preview: preview,
         tags: [

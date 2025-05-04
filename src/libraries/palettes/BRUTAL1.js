@@ -1,6 +1,6 @@
-const BOLD1 = {
-    id: 'BOLD1',
-    name: 'Bold 1',
+const BRUTAL1 = {
+    id: 'BRUTAL1',
+    name: 'Brutal 1',
     colors: ['#141414', '#FFFFFF', '#A5A5A5'],
     tags: [
       { 
@@ -16,4 +16,4 @@ const BOLD1 = {
     ]
   };
 
-export default BOLD1; 
+export default BRUTAL1; 
