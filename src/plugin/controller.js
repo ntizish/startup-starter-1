@@ -3,7 +3,7 @@ import { generateSlides } from "./renderSlides";
 
 figma.clientStorage.setAsync('onboardingCompleted', false); // TEMPORARY TO TEST ONBOARDING
 
-figma.showUI(__html__, { width: 540, height: 685 });
+figma.showUI(__html__, { width: 360, height: 540 });
 
 figma.ui.onmessage = async (msg) => {
   console.log('FIGMA JUST GOT A MESSAGE, YO', msg)

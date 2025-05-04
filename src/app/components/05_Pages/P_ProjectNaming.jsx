@@ -26,22 +26,22 @@ export default function P_ProjectNaming({ onComplete, onBack, projectName, onNam
 
   return (
     <div className="P_ParameterSelection">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'center', width: '100%' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
         <M_GenerationNav onBack={onBack} />
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-            <div className="M_StepIndicator">
-              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
+            <div className="M_StepIndicator M_StepIndicator--small">
+              <div className="A_StepDot A_StepDot--small"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small A_StepDot--active"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
             </div>
 
-            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>Name Your Project</h1>
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px'}}>Name Your Project</h1>
           </div>
           
-          <div style={{width: '100%', maxWidth: '428px'}}>
+          <div style={{width: '100%', maxWidth: '290px'}}>
             <A_GeneratorInput
               id="projectName"
               value={projectName}

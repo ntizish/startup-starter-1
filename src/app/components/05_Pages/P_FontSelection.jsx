@@ -23,14 +23,14 @@ export default function P_FontSelection({ onSelect, onBack, selectedFont, onFont
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-            <div className="M_StepIndicator">
-              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
-              <div className="A_StepDot"></div>
+            <div className="M_StepIndicator M_StepIndicator--small">
+              <div className="A_StepDot A_StepDot--small"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small A_StepDot--active"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+              <div className="A_StepDot A_StepDot--small"></div>
             </div>
 
-            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>Select the perfect font for your project</h1>
+            <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290px', padding: '0 0 24px 0'}}>Select the perfect font for your project</h1>
           </div>
           
           <div className="template-options" style={{width: '100%'}}>

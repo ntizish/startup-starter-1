@@ -48,7 +48,7 @@
 
   &--action_block {
     display: flex;
-    background-color: transparent;
+    background-color: vars.$card-border;
     color: vars.$text-secondary;
     flex-direction: column;
     justify-content: center;
@@ -56,10 +56,11 @@
     width: 100%;
     height: 100%;
     border-radius: vars.$rounding-block;
-    border: 1px solid vars.$border-default;
+    // border: 1px solid vars.$border-default;
 
     &:hover {
-      background-color: vars.$card-border;
+      background-color: vars.$primary-hover;
+      color: vars.$main-blue;
     }
   }
 } 

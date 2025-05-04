@@ -36,19 +36,19 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
       <div className="content-container">
         <M_GenerationNav onBack={onBack} />
         
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-              <div className="M_StepIndicator">
-                  <div className="A_StepDot A_StepDot--active"><div className="A_StepDot_Inner"></div></div>
-                  <div className="A_StepDot"></div>
-                  <div className="A_StepDot"></div>
-                  <div className="A_StepDot"></div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center', width: '100%' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', width: '100%' }}>
+              <div className="M_StepIndicator M_StepIndicator--small">
+                  <div className="A_StepDot A_StepDot--small A_StepDot--active"><div className="A_StepDot_Inner A_StepDot_Inner--small"></div></div>
+                  <div className="A_StepDot A_StepDot--small"></div>
+                  <div className="A_StepDot A_StepDot--small"></div>
+                  <div className="A_StepDot A_StepDot--small"></div>
               </div>
 
-              <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '428px'}}>What graphics suit your project the best?</h1>
+              <h1 className="A_Text A_Text--heading A_Text--heading-center" style={{width: '290'}}>What graphics suit your project the best?</h1>
             </div>
             
-            <div className="template-options" style={{width: '100%'}}>
+            <div className="template-options" style={{width: '100%', padding: '0 0 24px 0'}}>
               {availableTemplates.map((template) => (
                 <M_TemplateOption
                   key={template.id}

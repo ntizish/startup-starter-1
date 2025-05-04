@@ -8,8 +8,13 @@
   font-size: 14px;
   width: fit-content;
   padding: 0;
+  cursor: pointer;
   
   &--primary {
     color: vars.$link-grey;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 } 
