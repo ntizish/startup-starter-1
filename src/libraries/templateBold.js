@@ -28,14 +28,14 @@ const templateBold = {
       { type: "text", position: [56, 463], size: [592, 457], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 0, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "PROBLEM", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
-      { type: "rectangle", position: [1286, 1080], size: [318, 524], colorIndex: 2, rotation: 180.0 },
+      { type: "rectangle", position: [1286, 1080], size: [318, 180], colorIndex: 2, rotation: 180.0 },
       { type: "rectangle", position: [1603, 1080], size: [317, 1080], colorIndex: 2, opacity: 0.11, rotation: 180.0 },
-      { type: "rectangle", position: [1603, 1080], size: [317, 546], colorIndex: 2, rotation: 180.0 },
+      { type: "rectangle", position: [1603, 1080], size: [317, 892], colorIndex: 2, rotation: 180.0 },
       { type: "rectangle", position: [1920, 1080], size: [317, 1080], colorIndex: 2, opacity: 0.1, rotation: 180.0 },
-      { type: "rectangle", position: [1920, 1080], size: [317, 534], colorIndex: 2, rotation: 180.0 },
-      { type: "text", position: [968, 487], size: [317, 0], content: "31%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
-      { type: "text", position: [1286, 487], size: [317, 0], content: "34%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
-      { type: "text", position: [1604, 487], size: [317, 0], content: "32%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
+      { type: "rectangle", position: [1920, 1080], size: [317, 544], colorIndex: 2, rotation: 180.0 },
+      { type: "text", position: [968, 487], size: [317, 106], content: "25%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
+      { type: "text", position: [1286, 487], size: [317, 106], content: "50%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
+      { type: "text", position: [1604, 487], size: [317, 106], content: "25%", colorIndex: 0, fontSize: 96, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [1621, 966], size: [280, 58], content: "Some visualised data explanation up to 2 lines", colorIndex: 0, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 120, opacity: 0.5 },
       { type: "text", position: [1304, 966], size: [280, 58], content: "Some visualised data explanation up to 2 lines", colorIndex: 0, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 120, opacity: 0.5 },
       { type: "text", position: [987, 966], size: [280, 58], content: "Some visualised data explanation up to 2 lines", colorIndex: 0, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 120, opacity: 0.5 },
@@ -49,7 +49,8 @@ const templateBold = {
     backgroundColorIndex: 1,
     title: "Solution Slide",
     elements: [
-      { type: "rectangle", position: [724, 1029], size: [896, 458], colorIndex: 2, rotation: 3.0 },
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_3.png", position: [664, 620], size: [896, 460]},
+      { type: "rectangle", position: [700, 566.89], size: [896, 458], colorIndex: 2, rotation: 3.0 },
       { type: "text", position: [56, 53], size: [1808, 381], content: "The solution is simply so unique it’s even hard to comprehend", colorIndex: 0, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "SOLUTION", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
@@ -58,10 +59,11 @@ const templateBold = {
       { type: "rectangle", position: [1598, 960], size: [12, 12], colorIndex: 1, borderRadius: 9999, rotation: -3.0 },
     ]
   },
-  problemSlide2: {
+  solutionSlide2: {
     backgroundColorIndex: 0,
     title: "Solution Slide",
     elements: [
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_4.png", position: [968, 22], size: [933, 1036]},
       { type: "text", position: [56, 53], size: [896, 381], content: "Functionality that’s tailored for your need on the go", colorIndex: 1, fontSize: 72, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "SOLUTION", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
@@ -76,6 +78,7 @@ const templateBold = {
     backgroundColorIndex: 0,
     title: "Market Slide",
     elements: [
+      { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_5.png", position: [0, 21], size: [1920, 1059]},
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "MARKET", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [95, 230], size: [913, 168], content: "$ 151.2M", colorIndex: 1, fontSize: 156, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
@@ -105,6 +108,10 @@ const templateBold = {
       { type: "text", position: [1120, 436], size: [744, 0], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Regular", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [1120, 609], size: [744, 0], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Regular", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [1120, 782], size: [744, 0], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Regular", letterSpacing: -1, lineHeight: 110 },
+      { type: "rectangle", position: [56, 353], size: [1808, 1], colorIndex: 2, opacity: 0.32 },
+      { type: "rectangle", position: [56, 527], size: [1808, 1], colorIndex: 2, opacity: 0.32 },
+      { type: "rectangle", position: [56, 700], size: [1808, 1], colorIndex: 2, opacity: 0.32 },
+      { type: "rectangle", position: [56, 873], size: [1808, 1], colorIndex: 2, opacity: 0.32 }
     ]
   },
   teamSlide: {
