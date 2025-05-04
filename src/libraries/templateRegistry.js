@@ -32,7 +32,9 @@ export function getAllTemplates() {
   return Object.entries(templates).map(([id, template]) => ({
     id,
     name: template.metadata.name,
-    description: template.metadata.description
+    description: template.metadata.description,
+    preview: template.metadata.preview,
+    tags: template.metadata.tags || []
   }));
 }
 

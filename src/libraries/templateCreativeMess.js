@@ -1,11 +1,25 @@
 // Templates of the slides being generated with the plugin
+import preview from "../app/assets/images/slides/CM/preview.png"
 
 const templateCreativeMess = {
     metadata: {
         name: "Creative Mess",
         description: "Modern design with creative elements",
         availablePalettes: ['CM1', 'CM2', 'CM3'],
-        availableFonts: ['Inter', 'Space Grotesk', 'Chakra Petch']
+        availableFonts: ['Inter', 'Space Grotesk', 'Chakra Petch'],
+        preview: preview,
+        tags: [
+            { 
+                text: "Creative", 
+                backgroundColor: "#C7D6EB",
+                textColor: "#1E3D66"
+            },
+            { 
+                text: "Playful", 
+                backgroundColor: "#C1EEBB",
+                textColor: "#28661E"
+            }
+        ]
     },
     titleSlide: {
       backgroundColorIndex: 0,

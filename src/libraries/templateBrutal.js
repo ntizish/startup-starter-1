@@ -1,11 +1,25 @@
 // Templates of the slides being generated with the plugin
+import preview from "../app/assets/images/slides/CM/preview.png"
 
 const templateBrutal = {
     metadata: {
         name: "Brutal",
         description: "Brutal design with bold elements",
         availablePalettes: ['BRUTAL1'],
-        availableFonts: ['Archivo Narrow', 'Outfit', 'Mate']
+        availableFonts: ['Archivo Narrow', 'Outfit', 'Mate'],
+        preview: preview,
+        tags: [
+            { 
+                text: "Brutal", 
+                backgroundColor: "#F7E3DC",
+                textColor: "#802E11"
+            },
+            { 
+                text: "Bold", 
+                backgroundColor: "#E3DCF7",
+                textColor: "#2E1180"
+            }
+        ]
     },
     titleSlide: {
     backgroundColorIndex: 0,
@@ -21,7 +35,7 @@ const templateBrutal = {
       { type: "rectangle", position: [1880, 1058], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [22, 1041], size: [34, 1], colorIndex: 1 },
       { type: "rectangle", position: [1864, 1041], size: [34, 1], colorIndex: 1 },
-      { type: "text", position: [56, 56], size: [1808, 244], content: "Project title describing it’s core value with additional text to add", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
+      { type: "text", position: [56, 56], size: [1808, 244], content: "Project title describing it's core value with additional text to add", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [56, 894], size: [288, 23], content: "Project", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [360, 894], size: [288, 23], content: "Presented by", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [664, 894], size: [288, 23], content: "Event", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
@@ -50,7 +64,7 @@ const templateBrutal = {
       { type: "rectangle", position: [1880, 1058], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [22, 1041], size: [34, 1], colorIndex: 1 },
       { type: "rectangle", position: [1864, 1041], size: [34, 1], colorIndex: 1 },
-      { type: "text", position: [56, 56], size: [1808, 244], content: "Short overview of the problem that’s being solved with your product", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
+      { type: "text", position: [56, 56], size: [1808, 244], content: "Short overview of the problem that's being solved with your product", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [56, 722], size: [1808, 302], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 4 lines of text.", colorIndex: 2, fontSize: 64, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [56, 630], size: [1808, 243], content: "25%", colorIndex: 1, fontSize: 256, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [1424, 506], size: [136, 69], content: "Q1 2025 Event Project Name", colorIndex: 1, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95, opacity: 0.1 },
@@ -70,7 +84,7 @@ const templateBrutal = {
       { type: "rectangle", position: [1880, 1058], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [22, 1041], size: [34, 1], colorIndex: 1 },
       { type: "rectangle", position: [1864, 1041], size: [34, 1], colorIndex: 1 },
-      { type: "text", position: [56, 56], size: [1808, 244], content: "Short overview of the problem that’s being solved with your product", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
+      { type: "text", position: [56, 56], size: [1808, 244], content: "Short overview of the problem that's being solved with your product", colorIndex: 1, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [977, 422], size: [887, 102], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 4 lines of text.", colorIndex: 2, fontSize: 32, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [360, 506], size: [136, 69], content: "Q1 2025 Event Project Name", colorIndex: 1, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95, opacity: 0.1 },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BRUTAL/BRUTAL_1.png", position: [977, 558], size: [887, 466]}
@@ -90,7 +104,7 @@ const templateBrutal = {
       { type: "rectangle", position: [1880, 1058], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [22, 1041], size: [34, 1], colorIndex: 1 },
       { type: "rectangle", position: [1864, 1041], size: [34, 1], colorIndex: 1 },
-      { type: "text", position: [56, 56], size: [896, 273], content: "Functionality that’s tailored for your need on the go", colorIndex: 1, fontSize: 96, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
+      { type: "text", position: [56, 56], size: [896, 273], content: "Functionality that's tailored for your need on the go", colorIndex: 1, fontSize: 96, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [56, 422], size: [887, 602], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 4 lines of text.", colorIndex: 1, fontSize: 56, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [360, 506], size: [136, 69], content: "Q1 2025 Event Project Name", colorIndex: 1, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95, opacity: 0.1 },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BRUTAL/BRUTAL_2.png", position: [1045.19, 56], size: [754.21, 1558]}
@@ -110,7 +124,7 @@ const templateBrutal = {
       { type: "rectangle", position: [1880, 1058], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [22, 1041], size: [34, 1], colorIndex: 1 },
       { type: "rectangle", position: [1864, 1041], size: [34, 1], colorIndex: 1 },
-      { type: "text", position: [56, 56], size: [1808, 558], content: "Functionality that’s tailored for your need on the go", colorIndex: 1, fontSize: 196, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
+      { type: "text", position: [56, 56], size: [1808, 558], content: "Functionality that's tailored for your need on the go", colorIndex: 1, fontSize: 196, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },
       { type: "text", position: [575, 506], size: [136, 69], content: "Q1 2025 Event Project Name", colorIndex: 1, fontSize: 24, alignHorizontal: "CENTER", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95, opacity: 0.1 },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BRUTAL/BRUTAL_2.png", position: [784, 510], size: [437.32, 903.38]},
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BRUTAL/BRUTAL_2.png", position: [1272, 386], size: [437.32, 903.38]}

@@ -18,25 +18,13 @@ export default function P_TemplateSelection({ onSelect, onBack, selectedTemplate
       // For now, hardcode the preview image for Creative Mess
       // In a real app, you'd have a more dynamic way to get these
       let previewImage = null;
-      if (template.id === 'CreativeMess') {
-        previewImage = creativeMessPreview;
+      if (template.preview) {
+        previewImage = template.preview;
       }
       
       return {
         ...template,
-        image: previewImage,
-        tags: [
-          { 
-            text: "Creative", 
-            backgroundColor: "#C7D6EB",
-            textColor: "#1E3D66"
-          },
-          { 
-            text: "Modern", 
-            backgroundColor: "#C1EEBB",
-            textColor: "#28661E"
-          }
-        ]
+        image: previewImage
       };
     });
     

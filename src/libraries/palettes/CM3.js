@@ -1,7 +1,7 @@
 const CM3 = {
     id: 'CM3',
     name: 'Creative Mess 3',
-    colors: ['#F2F2F2', '#333333', '#FF6B6B'],
+    colors: ['#4C7C6E', '#FFFFFF', '#8CD3BE'],
     tags: [
       { 
         text: "Bold", 

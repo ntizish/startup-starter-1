@@ -1,10 +1,25 @@
 // Template definition for minimalist style
+import preview from "../app/assets/images/slides/CM/preview.png"
+
 const templateBold = {
   metadata: {
     name: "Bold",
     description: "Clean and simple designs with ample white space",
     availablePalettes: ['BOLD1'], // This template works best with these palettes
-    availableFonts: ['Archivo', 'Parkinsans', 'Montserrat Alternates'] // This template works best with these fonts
+    availableFonts: ['Archivo', 'Parkinsans', 'Montserrat Alternates'], // This template works best with these fonts
+    preview: preview,
+    tags: [
+      { 
+        text: "Minimal", 
+        backgroundColor: "#F0E6F7",
+        textColor: "#5A2A82"
+      },
+      { 
+        text: "Bright", 
+        backgroundColor: "#E3DCF7",
+        textColor: "#2E1180"
+      }
+    ]
   },
   titleSlide: {
     backgroundColorIndex: 0,
@@ -24,7 +39,7 @@ const templateBold = {
     title: "Problem Slide",
     elements: [
       { type: "rectangle", position: [1286, 1080], size: [318, 1080], colorIndex: 2, opacity: 0.1, rotation: 180.0 },
-      { type: "text", position: [56, 53], size: [896, 381], content: "Short overview of the problem that’s being solved with your product", colorIndex: 0, fontSize: 80, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 90 },
+      { type: "text", position: [56, 53], size: [896, 381], content: "Short overview of the problem that's being solved with your product", colorIndex: 0, fontSize: 80, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 90 },
       { type: "text", position: [56, 463], size: [592, 457], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 0, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "PROBLEM", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
@@ -50,7 +65,7 @@ const templateBold = {
     title: "Solution Slide",
     elements: [
       { type: "rectangle", position: [700, 566.89], size: [896, 458], colorIndex: 2, rotation: 3.0 },
-      { type: "text", position: [56, 53], size: [1808, 381], content: "The solution is simply so unique it’s even hard to comprehend", colorIndex: 0, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
+      { type: "text", position: [56, 53], size: [1808, 381], content: "The solution is simply so unique it's even hard to comprehend", colorIndex: 0, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "SOLUTION", colorIndex: 0, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "rectangle", position: [1574, 531], size: [12, 12], colorIndex: 1, borderRadius: 9999, rotation: -3.0 },
@@ -64,7 +79,7 @@ const templateBold = {
     title: "Solution Slide",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_4.png", position: [968, 22], size: [933, 1036]},
-      { type: "text", position: [56, 53], size: [896, 381], content: "Functionality that’s tailored for your need on the go", colorIndex: 1, fontSize: 72, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
+      { type: "text", position: [56, 53], size: [896, 381], content: "Functionality that's tailored for your need on the go", colorIndex: 1, fontSize: 72, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "SOLUTION", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [64, 470], size: [592, 219], content: "Larger description of the way that product solves the issue. May be longer that a sentence and up to 8 lines of text.", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
