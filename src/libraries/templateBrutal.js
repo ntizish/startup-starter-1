@@ -1,5 +1,5 @@
 // Templates of the slides being generated with the plugin
-import preview from "../app/assets/images/slides/CM/preview.png"
+import preview from "../app/assets/images/slides/BRUTAL/preview.png"
 
 const templateBrutal = {
     metadata: {

@@ -1,5 +1,5 @@
 // Template definition for minimalist style
-import preview from "../app/assets/images/slides/CM/preview.png"
+import preview from "../app/assets/images/slides/BOLD/preview.png"
 
 const templateBold = {
   metadata: {
