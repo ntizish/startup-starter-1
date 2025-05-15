@@ -43,6 +43,20 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
         frame.x = xOffset; // Set the x position of the frame
         xOffset += frame.width + 64; // Increment xOffset by frame width plus 64px gap
 
+        // Create instruction text using SlideElement
+        const instructionElement = new SlideElement({
+            type: "text",
+            content: selectedTemplate[slideKey].instruction || "No instruction available",
+            position: [frame.x, frame.y + frame.height + 32],
+            size: [385, 400],
+            font: font,
+            color: "#000000",
+            fontSize: 24,
+            fontWeight: "Regular",
+            alignHorizontal: "LEFT",
+            alignVertical: "TOP"
+        });
+
         // Create all elements first and store them in an array
         const elementPromises = selectedTemplate[slideKey].elements.map(async (element) => {
             console.log('Iterating over an element');
@@ -76,6 +90,14 @@ export async function generateSlides({ template = 'Default', palette = 'Default'
                 return null;
             }
         });
+
+        // Add instruction text creation to elementPromises
+        elementPromises.push(instructionElement.createFigmaElement().then(instructionText => {
+            if (instructionText) {
+                figma.currentPage.appendChild(instructionText);
+            }
+            return null; // Return null since we don't need to add it to the slide frame
+        }));
 
         // Wait for all elements to be created, then add them to the frame in reverse order
         Promise.all(elementPromises).then(figmaElements => {

@@ -24,6 +24,7 @@ const templateBrutal = {
     titleSlide: {
     backgroundColorIndex: 0,
     title: "Title Slide",
+    instruction: "Use this slide to make a bold first impression with a large title and supporting information. The border elements create a strong frame for your content. Keep the title impactful and the supporting text concise.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -53,6 +54,7 @@ const templateBrutal = {
   problemSlide: {
     backgroundColorIndex: 0,
     title: "Problem Slide",
+    instruction: "Use this slide to present the problem with a bold headline and supporting statistics. The large percentage number emphasizes the scale of the problem. Keep the problem statement clear and the supporting text focused.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -73,6 +75,7 @@ const templateBrutal = {
   solutionSlide: {
     backgroundColorIndex: 0,
     title: "Solutions Slide",
+    instruction: "Use this slide to present your solution with a bold headline and supporting image. The clean layout emphasizes your solution's key features. Make your solution statement compelling and the supporting text clear.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -93,6 +96,7 @@ const templateBrutal = {
   demoSlide: {
     backgroundColorIndex: 0,
     title: "Demo Slide",
+    instruction: "Use this slide to showcase your product's functionality with a split layout. The left side contains feature descriptions, while the right side displays the product interface. Focus on the most important features.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -113,6 +117,7 @@ const templateBrutal = {
   demoSlide2: {
     backgroundColorIndex: 0,
     title: "Demo Slide",
+    instruction: "Use this slide as an alternative demo presentation with a bold headline and multiple product views. The layout allows for showcasing different aspects or states of your product. Keep the descriptions clear and focused.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -133,6 +138,7 @@ const templateBrutal = {
   marketSlide: {
     backgroundColorIndex: 0,
     title: "Market Slide",
+    instruction: "Use this slide to present market size with a bold number and supporting text. The clean layout emphasizes the market opportunity. Include market size, growth projections, and key market insights.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -154,6 +160,7 @@ const templateBrutal = {
   marketSlide2: {
     backgroundColorIndex: 0,
     title: "Market Slide",
+    instruction: "Use this slide as an alternative market presentation with a split layout. Each section can highlight different market aspects or segments. Keep the data clear and the supporting text focused on key insights.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -175,6 +182,7 @@ const templateBrutal = {
   teamSlide: {
     backgroundColorIndex: 0,
     title: "Team Slide",
+    instruction: "Use this slide to introduce your team members in a grid layout. Each team member should have a photo, name, and role description. The consistent spacing creates a professional presentation.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -203,6 +211,7 @@ const templateBrutal = {
   gallerySlide: {
     backgroundColorIndex: 0,
     title: "Gallery Slide",
+    instruction: "Use this slide to showcase your product or project through two large images. Each image should have a brief description explaining its significance. The layout creates a strong visual impact.",
     elements: [
       { type: "rectangle", position: [959, 557], size: [34, 1], colorIndex: 1, rotation: 90.0 },
       { type: "rectangle", position: [943, 540], size: [34, 1], colorIndex: 1 },
@@ -223,6 +232,7 @@ const templateBrutal = {
   contactSlide: {
     backgroundColorIndex: 0,
     title: "Contact Slide",
+    instruction: "Use this slide to provide contact information with a bold call-to-action. The border elements frame your content while maintaining readability. Include all relevant contact methods and make the call-to-action clear.",
     elements: [
       { type: "text", position: [56, 56], size: [1808, 436], content: "Shape the world with us!", colorIndex: 1, fontSize: 256, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 85 },
       { type: "text", position: [56, 894], size: [288, 23], content: "Email", colorIndex: 1, fontSize: 24, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 95 },

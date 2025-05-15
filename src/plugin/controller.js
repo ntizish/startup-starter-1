@@ -1,5 +1,16 @@
 import { saveImageDataOrExportToFigma } from './images'
 import { generateSlides } from "./renderSlides";
+import { savePresentation, getPresentations } from '../libraries/figmaStorage';
+
+// Initialize storage and show saved presentations on startup
+(async () => {
+  const savedPresentations = await getPresentations();
+  console.log('Saved presentations:', savedPresentations);
+  figma.ui.postMessage({ 
+    type: 'SAVED_PRESENTATIONS', 
+    presentations: savedPresentations 
+  });
+})();
 
 figma.clientStorage.setAsync('onboardingCompleted', false); // TEMPORARY TO TEST ONBOARDING
 
@@ -32,11 +43,27 @@ figma.ui.onmessage = async (msg) => {
     const { template, palette, font, projectName } = msg;
     
     try {
+      // Save the presentation data before generating slides
+      await savePresentation({
+        template,
+        palette,
+        font,
+        projectName
+      });
+
+      // Generate the slides
       await generateSlides({
         template,
         palette,
         font,
         projectName
+      });
+
+      // Get updated presentations list and send to UI
+      const updatedPresentations = await getPresentations();
+      figma.ui.postMessage({ 
+        type: 'SAVED_PRESENTATIONS', 
+        presentations: updatedPresentations 
       });
     } catch (error) {
       console.error('Error generating slides:', error);

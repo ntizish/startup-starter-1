@@ -48,7 +48,7 @@
 
   &--action_block {
     display: flex;
-    background-color: vars.$card-border;
+    background-color: rgba(vars.$grey, 0.08);
     color: vars.$text-secondary;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,8 @@
     border-radius: vars.$rounding-block;
 
     &:hover {
-      background-color: rgba(vars.$primary-hover, 0.4);
+      background-color: rgba(vars.$grey, 0.15);
+      border: 4px dashed var(vars.$grey, 0.4);
     }
   }
 } 

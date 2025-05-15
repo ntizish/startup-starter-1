@@ -21,6 +21,7 @@ import P_Onboarding from './components/05_Pages/P_Onboarding';
 
 const App = () => {
   const [showOnboarding, setShowOnboarding] = useState(true);
+  const [savedPresentations, setSavedPresentations] = useState([]);
 
   const handleOnboardingComplete = () => {
     setShowOnboarding(false);
@@ -35,8 +36,13 @@ const App = () => {
     // Listen for response from the main plugin code
     const messageHandler = (event) => {
       const message = event.data.pluginMessage;
-      if (message && message.type === 'ONBOARDING_STATUS') {
-        setShowOnboarding(!message.completed);
+      if (message) {
+        if (message.type === 'ONBOARDING_STATUS') {
+          setShowOnboarding(!message.completed);
+        } else if (message.type === 'SAVED_PRESENTATIONS') {
+          console.log('Received saved presentations:', message.presentations);
+          setSavedPresentations(message.presentations);
+        }
       }
     };
 
@@ -98,6 +104,7 @@ const App = () => {
       ) : (
         <P_Home
           onGenerate={handleGenerateSlide}
+          savedPresentations={savedPresentations}
         />
       )}
     </div>

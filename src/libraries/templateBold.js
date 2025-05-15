@@ -24,6 +24,7 @@ const templateBold = {
   titleSlide: {
     backgroundColorIndex: 0,
     title: "Title Slide",
+    instruction: "Use this slide to make a strong first impression with a bold title and subtitle. The circular background creates a modern, minimalist look. Keep the title concise and the description brief but impactful.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_1.png", position: [12, 12], size: [1896, 1056], borderRadius: 9999 },
       { type: "text", content: "Project Title", position: [35, 432], colorIndex: 1, fontSize: 196, size: [1850, 216], alignHorizontal: "CENTER", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 110  },
@@ -37,6 +38,7 @@ const templateBold = {
   problemSlide: {
     backgroundColorIndex: 1,
     title: "Problem Slide",
+    instruction: "Use this slide to present the problem statement with supporting data visualization. The three columns allow you to break down the problem into key statistics or components. Keep the text clear and the data points meaningful.",
     elements: [
       { type: "rectangle", position: [1286, 1080], size: [318, 1080], colorIndex: 2, opacity: 0.1, rotation: 180.0 },
       { type: "text", position: [56, 53], size: [896, 381], content: "Short overview of the problem that's being solved with your product", colorIndex: 0, fontSize: 80, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 90 },
@@ -63,6 +65,7 @@ const templateBold = {
   solutionSlide: {
     backgroundColorIndex: 1,
     title: "Solution Slide",
+    instruction: "Use this slide to present your solution with a large, bold headline and supporting image. The tilted rectangle adds visual interest while maintaining the clean design. Focus on the core value proposition of your solution.",
     elements: [
       { type: "rectangle", position: [700, 566.89], size: [896, 458], colorIndex: 2, rotation: 3.0 },
       { type: "text", position: [56, 53], size: [1808, 381], content: "The solution is simply so unique it's even hard to comprehend", colorIndex: 0, fontSize: 128, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
@@ -77,6 +80,7 @@ const templateBold = {
   solutionSlide2: {
     backgroundColorIndex: 0,
     title: "Solution Slide",
+    instruction: "Use this slide as an alternative solution presentation with a split layout. The left side contains the solution description, while the right side showcases a product image. Emphasize the key benefits and features of your solution.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_4.png", position: [968, 22], size: [933, 1036]},
       { type: "text", position: [56, 53], size: [896, 381], content: "Functionality that's tailored for your need on the go", colorIndex: 1, fontSize: 72, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
@@ -92,6 +96,7 @@ const templateBold = {
   marketSlide: {
     backgroundColorIndex: 0,
     title: "Market Slide",
+    instruction: "Use this slide to present market size and opportunity with a bold number and supporting text. The background image adds context while maintaining readability. Include market size, growth projections, and key market insights.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_5.png", position: [0, 21], size: [1920, 1059]},
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
@@ -107,6 +112,7 @@ const templateBold = {
   roadmapSlide: {
     backgroundColorIndex: 0,
     title: "Roadmap Slide",
+    instruction: "Use this slide to outline your project timeline with clear quarterly milestones. Each section should have a bold heading and detailed description. The horizontal lines create visual separation between time periods.",
     elements: [
       { type: "text", position: [56, 984], size: [136, 40], content: "PROJECT NAME", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Bold", letterSpacing: -1, lineHeight: 110 },
       { type: "text", position: [208, 1004], size: [136, 20], content: "ROADMAP", colorIndex: 1, fontSize: 18, alignHorizontal: "LEFT", alignVertical: "BOTTOM", fontWeight: "Medium", letterSpacing: -1, lineHeight: 110 },
@@ -132,6 +138,7 @@ const templateBold = {
   teamSlide: {
     backgroundColorIndex: 0,
     title: "Team Slide",
+    instruction: "Use this slide to introduce your team members in a clean, grid layout. Each team member should have a photo, name, and role description. The consistent spacing and typography create a professional presentation.",
     elements: [
       { type: "rectangle", position: [968, 212], size: [440, 868], colorIndex: 2 },
       { type: "rectangle", position: [1424, 212], size: [440, 868], colorIndex: 2 },
@@ -163,6 +170,7 @@ const templateBold = {
   gallerySlide: {
     backgroundColorIndex: 0,
     title: "Gallery Slide",
+    instruction: "Use this slide to showcase your product or project through a grid of images. The layout allows for one large featured image and several smaller supporting images. Each image should have a clear purpose in telling your story.",
     elements: [
       { type: "text", position: [56, 53], size: [608, 78], content: "Gallery heading", colorIndex: 1, fontSize: 80, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 90 },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/BOLD/B_10.png", position: [56, 239], size: [896, 785]},
@@ -175,6 +183,7 @@ const templateBold = {
   contactSlide: {
     backgroundColorIndex: 2,
     title: "Contact Slide",
+    instruction: "Use this slide to provide contact information with a bold call-to-action. The tilted rectangles create visual interest while maintaining readability. Include all relevant contact methods and make the call-to-action clear and compelling.",
     elements: [
       { type: "text", position: [56, 56], size: [1808, 0], content: "Shape the world with us!", colorIndex: 0, fontSize: 220, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },
       { type: "text", position: [56, 990], size: [592, 0], content: "wanna@email.me", colorIndex: 0, fontSize: 32, alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Bold", letterSpacing: -1, lineHeight: 105 },

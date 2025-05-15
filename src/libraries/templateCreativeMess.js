@@ -24,6 +24,7 @@ const templateCreativeMess = {
     titleSlide: {
       backgroundColorIndex: 0,
       title: "Title Slide",
+      instruction: "Use this slide to introduce your project with a bold title and concise description. The title should be clear and impactful, while the description should provide a brief overview of your project's value proposition.",
       elements: [
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_1.png", position: [0, 0], size: [1920, 1080] },
         { type: "text", content: "Project Title", position: [360, 440], color: '#000000', colorIndex: 1, fontSize: 96, size: [1200, 200], alignHorizontal: "CENTER", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1, lineHeight: 95 },
@@ -32,6 +33,7 @@ const templateCreativeMess = {
     problemSlide: {
       backgroundColorIndex: 0,
       title: "Problem Slide",
+      instruction: "Use this slide to clearly articulate the problem your project solves. The left side is for text content explaining the problem, while the right side features a visual representation. Keep the problem statement concise and relatable.",
       elements: [
         { type: "text", content: "Problem", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
         { type: "text", content: "Short overview of the problem that's being solved with your product", position: [56, 128], color: '#000000', colorIndex: 1, fontSize: 56, size: [896, 159], alignHorizontal: "LEFT", alignVertical: "TOP", fontWeight: "Regular", letterSpacing: -1, lineHeight: 110  },
@@ -44,6 +46,7 @@ const templateCreativeMess = {
     solutionSlide: {
       backgroundColorIndex: 0,
       title: "Solution Slide",
+      instruction: "Use this slide to present your solution to the previously stated problem. The large text area should contain your main value proposition, while the visual elements help illustrate your solution. Make your solution statement compelling and clear.",
       elements: [
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_3.1.png", position: [0, 0], size: [1920, 1080] },
         { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_3.2.png", position: [426, 30], size: [982, 646] },
@@ -56,6 +59,7 @@ const templateCreativeMess = {
    demoSlide: {
     backgroundColorIndex: 0,
     title: "Demo Slide",
+    instruction: "Use this slide to showcase your product's key functionality. The left side contains feature descriptions, while the right side displays the product interface. Focus on the most important features that demonstrate your solution's effectiveness.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_4.1.png", position: [0, 0], size: [1920, 1080] },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_4.2.png", position: [664, 65], size: [460, 950] },
@@ -69,6 +73,7 @@ const templateCreativeMess = {
   marketSlide: {
     backgroundColorIndex: 0,
     title: "Market Slide",
+    instruction: "Use this slide to present market size and opportunity. The large number represents market value, while the floating elements create a dynamic visualization of market segments. Include relevant market statistics and growth projections.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_5.0.png", position: [0, 0], size: [1920, 1080] },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_5.1.png", position: [228, 200], size: [618, 686], rotation: -47 },
@@ -89,6 +94,7 @@ const templateCreativeMess = {
   roadmapSlide: {
     backgroundColorIndex: 0,
     title: "Roadmap Slide",
+    instruction: "Use this slide to outline your project's timeline and milestones. Each quarter should have a clear objective and detailed description of planned achievements. Keep the timeline realistic and focused on key deliverables.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_6.png", position: [55, 251], size: [1734, 774] },
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
@@ -115,6 +121,7 @@ const templateCreativeMess = {
   teamSlide: {
     backgroundColorIndex: 0,
     title: "Team Slide",
+    instruction: "Use this slide to introduce your team members. Each team member should have a photo, name, and brief description of their role and expertise. The creative layout allows for a dynamic presentation of your team's composition.",
     elements: [
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
       { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
@@ -141,6 +148,7 @@ const templateCreativeMess = {
   gallerySlide: {
     backgroundColorIndex: 0,
     title: "Gallery Slide",
+    instruction: "Use this slide to showcase your product or project through various images. Each image should have a brief description explaining its significance. The layout allows for a mix of different image sizes to create visual interest.",
     elements: [
       { type: "text", content: "Roadmap", position: [56, 56], color: '#000000', colorIndex: 1, fontSize: 24, size: [592, 28], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Medium", letterSpacing: -1.1, lineHeight: 115 },
       { type: "text", content: "ProjectName", position: [56, 1024], color: '#000000', colorIndex: 1, fontSize: 20, size: [440, 56], alignHorizontal: "LEFT", alignVertical: "CENTER", fontWeight: "Bold", letterSpacing: -1.1, lineHeight: 120 },
@@ -161,6 +169,7 @@ const templateCreativeMess = {
   contactsSlide: {
     backgroundColorIndex: 0,
     title: "Contacts Slide",
+    instruction: "Use this slide to provide contact information and call-to-action. Include all relevant contact methods (email, social media, website) with clear labels. The central message should encourage engagement with your project.",
     elements: [
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.1.png", position: [0, 0], size: [1920, 1080] },
       { type: "image", imageSrc: "https://raw.githubusercontent.com/ntizish/startup-starter-1/refs/heads/main/src/app/assets/images/slides/CM/CM_9.2.png", position: [362, 478], size: [1254, 1256] },
