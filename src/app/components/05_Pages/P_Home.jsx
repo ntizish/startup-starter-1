@@ -35,7 +35,8 @@ export default function P_Home({ savedPresentations = [] }) {
     parent.postMessage({ 
       pluginMessage: { 
         type: 'generate-slide',
-        ...selections
+        ...selections,
+        isRegeneration: false
       }
     }, '*');
     setShowSuccess(true);
@@ -60,7 +61,14 @@ export default function P_Home({ savedPresentations = [] }) {
   };
 
   const handleRegenerate = (presentation) => {
-    handleGenerate(presentation);
+    parent.postMessage({ 
+      pluginMessage: { 
+        type: 'generate-slide',
+        ...presentation,
+        isRegeneration: true
+      }
+    }, '*');
+    setShowSuccess(true);
   };
 
   if (isGenerating) {

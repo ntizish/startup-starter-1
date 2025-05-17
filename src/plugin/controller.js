@@ -40,16 +40,18 @@ figma.ui.onmessage = async (msg) => {
       figma.ui.postMessage({ type: 'get-storage', data: test })
     })
   } else if (msg.type === 'generate-slide') {
-    const { template, palette, font, projectName } = msg;
+    const { template, palette, font, projectName, isRegeneration } = msg;
     
     try {
-      // Save the presentation data before generating slides
-      await savePresentation({
-        template,
-        palette,
-        font,
-        projectName
-      });
+      // Only save to storage if it's a new presentation
+      if (!isRegeneration) {
+        await savePresentation({
+          template,
+          palette,
+          font,
+          projectName
+        });
+      }
 
       // Generate the slides
       await generateSlides({

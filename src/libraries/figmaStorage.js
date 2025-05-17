@@ -1,6 +1,7 @@
 // Utility functions for handling Figma client storage operations
 
 const STORAGE_KEY = 'presentation_history';
+const MAX_STORED_ITEMS = 3;
 
 // Save a new presentation to Figma client storage
 export async function savePresentation(presentationData) {
@@ -16,7 +17,13 @@ export async function savePresentation(presentationData) {
       id: Date.now().toString() // Unique ID for each presentation
     };
     
-    presentations.push(newPresentation);
+    // Add new presentation to the beginning of the array
+    presentations.unshift(newPresentation);
+    
+    // If we exceed MAX_STORED_ITEMS, remove the oldest ones
+    if (presentations.length > MAX_STORED_ITEMS) {
+      presentations.length = MAX_STORED_ITEMS;
+    }
     
     // Save back to Figma client storage
     await figma.clientStorage.setAsync(STORAGE_KEY, presentations);
@@ -59,6 +66,17 @@ export async function deletePresentation(id) {
     return true;
   } catch (error) {
     console.error('Error deleting presentation:', error);
+    return false;
+  }
+}
+
+// Clear all saved presentations
+export async function clearPresentations() {
+  try {
+    await figma.clientStorage.setAsync(STORAGE_KEY, []);
+    return true;
+  } catch (error) {
+    console.error('Error clearing presentations:', error);
     return false;
   }
 } 
