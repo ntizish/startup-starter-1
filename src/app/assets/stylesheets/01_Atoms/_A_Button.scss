@@ -40,9 +40,22 @@
   &--secondary {
     background-color: transparent;
     color: vars.$text-secondary;
+    font-size: 12px;
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+
+  &--tertiary {
+    background-color: vars.$light-blue;
+    color: vars.$main-blue;
+    border-radius: 999px;
+    padding: 8px 16px;
+    height: 40px;
+
+    &:hover {
+      background-color: vars.$tertiary-hover;
     }
   }
 

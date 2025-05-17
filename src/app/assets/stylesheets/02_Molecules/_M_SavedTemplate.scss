@@ -1,0 +1,37 @@
+@use '../vars';
+
+.M_SavedTemplate {
+  padding: 24px;
+  border-radius: vars.$rounding-block;
+  background-color: vars.$background-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 196px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .A_Text--small {
+      color: vars.$text-tertiary;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .A_Text--regular {
+      color: vars.$text-secondary;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+} 

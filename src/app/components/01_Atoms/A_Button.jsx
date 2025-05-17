@@ -16,6 +16,22 @@ const A_Button = ({
     large: 24
   };
 
+  const getIconSize = () => {
+    if (variant === 'tertiary') return 16;
+    return iconSizes[size];
+  };
+
+  const getFontSize = () => {
+    switch(variant) {
+      case 'secondary':
+        return '12px';
+      case 'tertiary':
+        return '14px';
+      default:
+        return '14px';
+    }
+  };
+
   const getFlexDirection = () => {
     switch(iconPosition) {
       case 'right':
@@ -34,6 +50,7 @@ const A_Button = ({
       case 'primary-special':
         return 'var(--white)';
       case 'primary':
+      case 'tertiary':
         return 'var(--main-blue)';
       default:
         return 'var(--text-secondary)';
@@ -45,11 +62,12 @@ const A_Button = ({
       onClick={onClick}
       className={`A_Button A_Button--${variant}`}
       style={{
-        flexDirection: getFlexDirection()
+        flexDirection: getFlexDirection(),
+        fontSize: getFontSize()
       }}
     >
       {Icon && <Icon 
-        size={iconSizes[size]} 
+        size={getIconSize()} 
         weight={weight}
         color={getIconColor()}
       />}
