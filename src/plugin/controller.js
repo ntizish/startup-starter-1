@@ -1,6 +1,6 @@
 import { saveImageDataOrExportToFigma } from './images'
 import { generateSlides } from "./renderSlides";
-import { savePresentation, getPresentations } from '../libraries/figmaStorage';
+import { savePresentation, getPresentations, deletePresentation } from '../libraries/figmaStorage';
 
 // Initialize storage and show saved presentations on startup
 (async () => {
@@ -68,6 +68,24 @@ figma.ui.onmessage = async (msg) => {
     } catch (error) {
       console.error('Error generating slides:', error);
       figma.closePlugin(`Error: ${error.message}`);
+    }
+  } else if (msg.type === 'delete-presentation') {
+    try {
+      // Delete the presentation
+      await deletePresentation(msg.id);
+      
+      // Get updated presentations list and send to UI
+      const updatedPresentations = await getPresentations();
+      figma.ui.postMessage({ 
+        type: 'SAVED_PRESENTATIONS', 
+        presentations: updatedPresentations 
+      });
+    } catch (error) {
+      console.error('Error deleting presentation:', error);
+      figma.ui.postMessage({ 
+        type: 'ERROR', 
+        message: 'Failed to delete presentation' 
+      });
     }
   } else {
     console.log('unknown message')

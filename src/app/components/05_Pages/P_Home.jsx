@@ -1,12 +1,34 @@
-import React, { useState } from 'react';
-import { PlusCircle } from '@phosphor-icons/react';
+import React, { useState, useEffect } from 'react';
+import { PlusCircle, Trash, ArrowsClockwise } from '@phosphor-icons/react';
 import M_WelcomeBlock from '../02_Molecules/M_WelcomeBlock';
 import A_Button from '../01_Atoms/A_Button';
 import P_Generator from './P_Generator';
+import P_GeneratedDeck from './P_GeneratedDeck';
 import M_HomeNav from '../02_Molecules/M_HomeNav';
 
 export default function P_Home({ savedPresentations = [] }) {
   const [isGenerating, setIsGenerating] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [localPresentations, setLocalPresentations] = useState(savedPresentations);
+
+  useEffect(() => {
+    // Update local state when prop changes
+    setLocalPresentations(savedPresentations);
+  }, [savedPresentations]);
+
+  useEffect(() => {
+    // Listen for messages from the plugin
+    const handleMessage = (event) => {
+      const message = event.data.pluginMessage;
+      
+      if (message.type === 'SAVED_PRESENTATIONS') {
+        setLocalPresentations(message.presentations);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleGenerate = (selections) => {
     console.log('Generating with selections:', selections);
@@ -16,10 +38,29 @@ export default function P_Home({ savedPresentations = [] }) {
         ...selections
       }
     }, '*');
+    setShowSuccess(true);
   };
 
   const handleGeneratorClose = () => {
     setIsGenerating(false);
+    setShowSuccess(false);
+  };
+
+  const handleDelete = (id) => {
+    // Send delete request to plugin
+    parent.postMessage({ 
+      pluginMessage: { 
+        type: 'delete-presentation',
+        id
+      }
+    }, '*');
+    
+    // Optimistically update UI
+    setLocalPresentations(prev => prev.filter(p => p.id !== id));
+  };
+
+  const handleRegenerate = (presentation) => {
+    handleGenerate(presentation);
   };
 
   if (isGenerating) {
@@ -27,6 +68,15 @@ export default function P_Home({ savedPresentations = [] }) {
       <P_Generator
         onComplete={handleGenerate}
         onCancel={handleGeneratorClose}
+      />
+    );
+  }
+
+  if (showSuccess) {
+    return (
+      <P_GeneratedDeck
+        onBack={handleGeneratorClose}
+        onClose={handleGeneratorClose}
       />
     );
   }
@@ -46,7 +96,7 @@ export default function P_Home({ savedPresentations = [] }) {
       <M_WelcomeBlock />
       
       {/* Display saved presentations */}
-      {savedPresentations.length > 0 && (
+      {localPresentations.length > 0 && (
         <div style={{
           width: '100%',
           maxWidth: '600px',
@@ -55,17 +105,38 @@ export default function P_Home({ savedPresentations = [] }) {
           gap: '16px'
         }}>
           <h3 style={{ margin: 0 }}>Recent Presentations</h3>
-          {savedPresentations.map((presentation) => (
+          {localPresentations.map((presentation) => (
             <div
               key={presentation.id}
               style={{
                 padding: '16px',
                 border: '1px solid #E5E5E5',
                 borderRadius: '8px',
-                backgroundColor: '#F8F8F8'
+                backgroundColor: '#F8F8F8',
+                position: 'relative'
               }}
             >
-              <h4 style={{ margin: '0 0 8px 0' }}>{presentation.projectName}</h4>
+              <div style={{
+                position: 'absolute',
+                top: '16px',
+                right: '16px',
+                display: 'flex',
+                gap: '8px'
+              }}>
+                <A_Button
+                  icon={ArrowsClockwise}
+                  variant="secondary"
+                  onClick={() => handleRegenerate(presentation)}
+                  style={{ padding: '8px' }}
+                />
+                <A_Button
+                  icon={Trash}
+                  variant="secondary"
+                  onClick={() => handleDelete(presentation.id)}
+                  style={{ padding: '8px' }}
+                />
+              </div>
+              <h4 style={{ margin: '0 0 8px 0', paddingRight: '80px' }}>{presentation.projectName}</h4>
               <div style={{ fontSize: '14px', color: '#666' }}>
                 <p style={{ margin: '4px 0' }}>Template: {presentation.template}</p>
                 <p style={{ margin: '4px 0' }}>Palette: {presentation.palette}</p>
