@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--color-background);
-  background-color: vars.$accent-yellow;
+  // background-color: var(--color-background);
+  // background-color: vars.$accent-yellow;
 
   &__content {
     display: flex;
@@ -20,8 +20,8 @@
 
   &__info-container {
     display: flex;
-    height: 280px;
-    padding: 24px 20px 0px 20px;
+    height: 100%;
+    padding: 36px 20px 0px 20px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,7 @@
   &__image {
     width: 100%;
     height: auto;
-    border-radius: 16px;
+    border-bottom: 1px solid vars.$border-default;
   }
 
   &__text {

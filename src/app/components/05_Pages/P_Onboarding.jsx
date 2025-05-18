@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import A_Button from '../01_Atoms/A_Button';
 import { CaretRight } from '@phosphor-icons/react';
 import onboarding1 from '../../assets/images/illustrations/onboarding-1.png';
-import onboarding2 from '../../assets/images/illustrations/onboarding-2.svg';
-import onboarding3 from '../../assets/images/illustrations/onboarding-3.svg';
-import onboarding4 from '../../assets/images/illustrations/onboarding-4.svg';
+import onboarding2 from '../../assets/images/illustrations/onboarding-2.png';
+import onboarding3 from '../../assets/images/illustrations/onboarding-3.png';
+import onboarding4 from '../../assets/images/illustrations/onboarding-4.png';
 
 const onboardingSteps = [
   {
     image: onboarding1,
-    heading: 'You’ve made a smart choice',
+    heading: 'Great day to pitch.',
     description: 'Let’s dive into how to generate pitch decks in Pitchiro with a brief onboarding.',
     showDismiss: true
   },
   {
     image: onboarding2,
-    heading: 'Bulletproof decks. No designer.',
+    heading: 'Stay efficient.',
     description: 'Create involving pitch decks that truly appeal to investors and get the job done without the need to hire any professional designer'
   },
   {
     image: onboarding3,
-    heading: 'Any style. It’s all good.',
+    heading: 'Keep it yours.',
     description: 'Select any graphics you like from our selection and be sure it suits your business'
   },
   {
     image: onboarding4,
-    heading: 'Evolve. Not from scratch.',
+    heading: 'Evolve. Always.',
     description: 'Go back to your previous pitch deck, generate lost slides or entire pitch deck any number of times'
   }
 ];
@@ -58,7 +58,7 @@ const P_Onboarding = ({ onComplete }) => {
         
         <div className="P_Onboarding__info-container">
             <div className="P_Onboarding__text">
-                <h1 className="A_Text A_Text--heading A_Text--heading-center">
+                <h1 className="A_Text A_Text--heading-onboarding A_Text--heading-onboarding-center">
                     {currentStepData.heading}
                 </h1>
                 <p className="A_Text A_Text--small A_Text--small-center" style={{maxWidth: '296px'}}>
